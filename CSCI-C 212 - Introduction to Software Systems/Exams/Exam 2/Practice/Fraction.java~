@@ -1,9 +1,0 @@
-public class Fraction {                    
-  public static void main(String[] args) { 
-    Fraction a, b;                         
-    a = new Fraction();                    
-    b = new Fraction();                    
-    System.out.println( a ); 
-    System.out.println( b ); 
-  }                                        
-}           

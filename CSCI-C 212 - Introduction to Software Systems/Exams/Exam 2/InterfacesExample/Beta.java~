@@ -1,5 +1,0 @@
-class Beta implements Multipler {
-  public int mul(int n, int m) {
-    return n * m;
-  }
-}

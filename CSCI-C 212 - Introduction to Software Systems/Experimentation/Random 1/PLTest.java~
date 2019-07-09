@@ -1,9 +1,0 @@
-class PLTest {
-  public void main (string[] args) {
-    Point p1 = new Point (0, 0);
-    Point p2 = new Point (10, 0);
-    Point p3 = new Point (5, 10);
-    Triangle t1 = new Triangle (p1, p2, p3);
-    System.out.println(t1.area());
-  }
-}

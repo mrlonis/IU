@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">Android Calling</string>
-    <string name="action_settings">Settings</string>
-    <string name="hello_universe">Hello Universe! Android Calling!</string>
-    <string name="FirstButton">My First Button</string>
-    <string name="FirstLargeText">My First Large Text View</string>
-</resources>
