@@ -1,0 +1,17 @@
+/*
+The following code illustrates anonymous blocks.
+class One {
+  public static void main(String[] args) {
+    { // first block starts here 
+      int i = 5, j = 2;
+      System.out.println( i + j );
+    } // and ends here 
+    { // second block starts here 
+      String i = "5";
+      char j = '2';
+      System.out.println( i + j );
+    } // and ends here 
+  }
+}
+What happens when you try to compile and run this code? Why?
+*/

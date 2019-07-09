@@ -1,0 +1,34 @@
+/**
+ * report.txt
+ *
+ * Created By: Matthew Lonis
+ * Created On: 20 October 2017
+ * Last Modified By: Matthew Lonis
+ * Last Modified On: 20 October 2017
+ */
+
+Q1) In previous labs, adding a peripheral has required pin initializations. Why were able to add the nunchuk without initializing anything?
+
+- It is because we plug it into the board ourselves
+
+Q2) Go through the code in both the f3d_i2c1_read_nunchuk and f3d_i2c1_read functions and answer the following question. What are the major differences between these two functions and what does that imply about communicating with the nunchuk?
+
+- It appears as though f3d_i2c1_read_nunchuk is different than f3d_i2c1_read by allowing f3d_i2c1_read to specify how many bytes to read whereas the nunchuk doesn't specify how many bytes.
+
+Q3) What do all of these variables correspond to in the nunchuk? Hint: It may be best to answer this question after the checkpoint
+
+- unsigned char jx = joystick x-axis movement
+  unsigned char jy = joystick y-axis movement
+  unsigned short ax = nunchuk accelerometer x axis
+  unsigned short ay = nunchuk accelerometer y axis
+  unsigned short az = nunchuk accelerometer z axis
+  unsigned char c = nunchuk c button pressed
+  unsigned char z = nunchuk z button pressed
+
+Q4) Explain the code above.
+
+- The code above is detecting if the z and c button are pressed by only viewing 2 bits of data[5]. This sets c and z to 0 or 1. The code is checking which case the data[5] correspoinds to in order to set c and z.
+
+Difficulty/What I Learned:
+
+Dicciculty initializing and getting the nunchuk setup. Learned how useful of a deviuce the nunchuk is.

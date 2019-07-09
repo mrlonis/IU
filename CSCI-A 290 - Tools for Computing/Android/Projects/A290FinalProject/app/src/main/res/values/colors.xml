@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+colors.xml
+
+Color Resources for this Project
+
+Created by: Matthew Lonis
+Created on: 2/27/17
+Last Modified by: Matthew Lonis
+Last Modified on: 3/5/17
+Assignment/Project: A290 Final Project
+Part of: A290FinalProject
+-->
+
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- Custom Colors -->
+    <color name="black">#000000</color> <!-- White text -->
+    <color name="white">#FFFFFF</color> <!-- Black Text -->
+    <color name="blue">#90CAF9</color> <!-- Black Text -->
+    <color name="red">#D50000</color> <!-- White Text -->
+    <color name="green">#8BC34A</color> <!-- Black Text -->
+    <color name="normal">#EEEEEE</color> <!-- Black Text -->
+</resources>

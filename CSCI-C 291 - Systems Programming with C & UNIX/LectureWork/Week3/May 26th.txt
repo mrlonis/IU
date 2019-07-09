@@ -1,0 +1,29 @@
+Pointers
+
+Pointing to
+
+int a = 5;
+int *b = &a; declares a pointer. Need the asterik
+b = &a; declares the address of a, because pointers can only hold addresses. This assigns the 		pointer a value
+
+b stores the address of a, lets say its 1002.
+
+We learned about arrays because they have a fixed size. Once a size is defined you cannot change size. Dynamic Memory Allocation. Pointers achieve direct access to memory. Will learn DMA to overcome the fixed size obstacle.
+
+Character
+
+char ' '
+
+A string is a set of characters or array of characters
+
+Command line arguments:
+
+cp -source -destination : Copy
+emacs -filename.c -destination : Emacs
+vim -filename.c  -destination : Vim
+
+char * argv[], int argc // argument vector and count respectively
+
+char argv only holds one character
+so we use char *argv pointer to get a string
+char *argv[] is an array of pointers

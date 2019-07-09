@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+activity_a290_final_project_main_drawer.xml
+
+Layout file for the Navigation Drawer
+
+Created by: Matthew Lonis
+Created on: 2/27/17
+Last Modified by: Matthew Lonis
+Last Modified on: 3/5/17
+Assignment/Project: A290 Final Project
+Part of: A290FinalProject, refers to A290FinalProjectMainActivity.java
+-->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/mainItems">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/nav_resume"
+            android:icon="@drawable/ic_resume"
+            android:title="@string/resume" />
+
+
+
+        <item android:id="@+id/nav_core_courses_item"
+            android:title="@string/core_courses">
+            <menu>
+                <group android:checkableBehavior="single"
+                    android:id="@+id/coreCourses">
+                    <item
+                        android:id="@+id/nav_csci_c211"
+                        android:icon="@drawable/ic_csci_core_courses"
+                        android:title="@string/csci_c211" />
+                    <item
+                        android:id="@+id/nav_csci_c212"
+                        android:icon="@drawable/ic_csci_core_courses"
+                        android:title="@string/csci_c212" />
+                    <item
+                        android:id="@+id/nav_csci_c343"
+                        android:icon="@drawable/ic_csci_core_courses"
+                        android:title="@string/csci_c343" />
+                </group>
+            </menu>
+        </item>
+
+
+
+        <item android:id="@+id/nav_specialization_courses_item"
+            android:title="@string/specialization_courses">
+            <menu>
+                <group android:id="@+id/specializationCourses"
+                    android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_csci_c291"
+                        android:icon="@drawable/ic_specialization_courses"
+                        android:title="@string/csci_c291" />
+                </group>
+            </menu>
+        </item>
+
+
+        <item android:title="@string/tools_for_computing">
+            <menu>
+                <group android:id="@+id/toolsForComputing"
+                    android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_csci_a290_c"
+                        android:icon="@drawable/ic_specialization_courses"
+                        android:title="@string/csci_a290_c_basics" />
+                    <item
+                        android:id="@+id/nav_csci_a290_windows"
+                        android:icon="@drawable/ic_csci_core_courses"
+                        android:title="@string/csci_a290_windows_programming" />
+                    <item
+                        android:id="@+id/nav_csci_a290_android"
+                        android:icon="@drawable/ic_csci_a290_android"
+                        android:title="@string/csci_a290_android" />
+                    <item
+                        android:id="@+id/nav_info_i101"
+                        android:icon="@drawable/ic_info_i101"
+                        android:title="@string/info_i101" />
+                </group>
+            </menu>
+        </item>
+    </group>
+</menu>

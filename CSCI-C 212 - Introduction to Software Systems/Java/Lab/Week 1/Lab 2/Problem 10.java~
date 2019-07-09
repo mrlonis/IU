@@ -1,0 +1,6 @@
+/*
+What's wrong with the following code? Explain your answer.
+if (2 < 1) ; {
+  System.out.println( "Oops." );
+}
+*/

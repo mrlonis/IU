@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+fragment_csci_c211.xml
+
+Layout file for the CSCI-C 211 Fragment
+
+Created by: Matthew Lonis
+Created on: 2/27/17
+Last Modified by: Matthew Lonis
+Last Modified on: 3/5/17
+Assignment/Project: A290 Final Project
+Part of: A290FinalProject, refers to csciC211Fragment.java
+-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scroll_view_c211"
+    tools:context="edu.indiana.mrlonis.a290finalproject.csciC211Fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/csciC211CourseInfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/course_info"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:textSize="14pt" />
+
+        <TextView
+            android:id="@+id/csciC211CourseDescription"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/csci_c211_course"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/csciC211Project1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/project_1"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:textSize="14pt" />
+
+        <TextView
+            android:id="@+id/csciC211Project1Name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:text="@string/csci_c211_project1_name"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/csciC211Project1Description"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/csci_c211_project1_description"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/csciC211Project1File"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/csci_c211_project1_file"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:id="@+id/csciC211Project2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/project_2"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:textSize="14pt" />
+
+        <TextView
+            android:id="@+id/csciC211Project2Name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:text="@string/csci_c211_project2_name"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/csciC211Project2Description"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/csci_c211_project2_description"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/csciC211Project2File"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/csci_c211_project2_file"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:id="@+id/csciC211Project3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/project_3"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:textSize="14pt" />
+
+        <TextView
+            android:id="@+id/csciC211Project3Name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:text="@string/csci_c211_project3_name"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/csciC211Project3Description"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/csci_c211_project3_description"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/csciC211Project3File"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/csci_c211_project3_file"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:id="@+id/csciC211Project4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/project_4"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:textSize="14pt" />
+
+        <TextView
+            android:id="@+id/csciC211Project4Name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:text="@string/csci_c211_project4_name"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/csciC211Project4Description"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/csci_c211_project4_description"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/csciC211Project4File"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/csci_c211_project4_file"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,27 @@
+/*********************************
+ * report.txt
+ *
+ * Answers the lab questions for lab 3
+ *
+ * Created By: Matthew Lonis
+ * Created On: 8 September 2017
+ * Last Modified By: Matthew Lonis
+ * Last Modified On: 8 September 2017
+ * Part Of: Lab 3
+ *
+ * Lab Partner: Nathan Lowry (ndlowry)
+ *********************************/
+
+Anwer these questions:
+
+1. What are specs of the board you are using (ex. Speed, RAM, Flash)?
+
+2. What does GPIO stand for?
+
+3. Is the provided delay function accurate? Why or why not? EDIT This question will be disregarded as this delay function does not have parameter Sorry for the confusion
+
+4. What are the Port and Pin Numbers of the two Green LEDs?
+
+5. What are the public attributes of the GPIO_InitTypeDef Struct?
+
+6. Were there any difficulties? If not, what did you learn?

@@ -1,0 +1,71 @@
+/**
+ * report.txt
+ *
+ * Created By: Matthew Lonis
+ * Created On: 19 October 2017
+ * Last Modified By: Matthew Lonis
+ * Last Modified On: 19 October 2017
+ */
+
+Q1) The accelerometer/magnetometer comes pre-wired on the STM board. Open up the the Data Sheet and find the page with the Pin Descriptions. How many pins does it have? List the pins and their names. Next find the electrical specifications under the Electrical Characteristics section. How many volts (Vdd) are required to power the accelerometer/magnetometer? The accelerometer/magnetometer is sitting somewhere on the STM board. Try to find it and describe where it is.
+
+Pin# 	Name 	   Function
+1 	Vdd_IO 	   Power supply for I/O pins
+2 	SCL 	   Signal interface I2C serial clock (SCL)
+3 	SDA 	   Signal interface I2C serial data (SDA)
+4 	INT2 	   Inertial Interrupt 2
+5 	INT1 	   Inertial Interrupt 1
+6 	C1 	   Reserved capacitor connection (C1)
+7 	GND 	   0 V supply
+8 	Reserved   Leave unconnected
+9 	DRDY 	   Data ready
+10 	Reserved   Connect to GND
+11 	Reserved   Connect to GND
+12 	SETP 	   S/R capacitor connection (C2)
+13 	SETC 	   S/R capacitor connection (C2)
+14 	Vdd 	   Power supply
+
+2.5 volts (Vdd) are required to power the accelerometer/magnetometer
+
+Q2) Why do we write to the accelerometer/magnetometer before we can read from them? What are the following lines of code doing? HINT: LOOK AT THE COMMENTS
+
+/* f3d_accel.c*/
+value = 0x40|0x07;                 // Normal Power Mode, All Axis Enable (X,Y,Z)
+f3d_i2c1_write(0x32, 0x20, &value); // Accel (0x32), Ctrl Reg1 (0x20)
+
+value = 0x08;              // Continuous Update, Little Endian, 2G Sensitivity, High Resolution Mode
+f3d_i2c1_write(0x32, 0x23, &value); // Accel (0x32, Ctrl Reg4  (0x23)
+
+value = 0x10 | 0x80;               // HPF Cutoff 16, High Pass Filter Normal Mode, AO1/AO1 Disable
+f3d_i2c1_write(0x32, 0x21, &value); // Accel (0x32, Ctrl Reg2  (0x21)
+
+/* f3d_mag.c */
+value = 0x14;                  //Temp sensor disable,30Hz Output Rate
+f3d_i2c1_write(0x3C, 0x00,  &value); // Mag (0x3C), CRA (0x00)
+
+value = 0xE0;                      // +/- 8.1 Gauss Full Scale
+f3d_i2c1_write(0x3C, 0x01, &value); // Mag (0x3C), CRB (0x01)
+
+value = 0x00;                      // Continuous Conversion
+f3d_i2c1_write(0x3C, 0x02, &value); // Mag (0x3C), MR  (0x23)
+
+- We write to the accelerometer/magnetometer due to the I2C protocol for writing and reading data. The code above is essentially setting up and initializing the accelerometer/magnetometer.
+
+Q3) What do the following lines of code do? (it is only necessary to explain the accelerometer)
+
+/*f3d_accel.c*/
+for (i=0; i<3; i++) {
+  raw_data[i]=((int16_t)((uint16_t)buffer[2*i+1] << 8) + buffer[2*i])/(uint8_t)16;
+  accel_data[i]=(float)raw_data[i]/1000.0;
+}
+
+- The following lines of code gather the raw data from the accelerometer and store it into an array called raw_data. From here, it converts the raw data into floating point decimals by dividing the raw data by 1,000 and then storing that number in an array called accel_data.
+
+Q4.) Why might it be necessary to tilt compensate your compass computation?
+
+- It might be necessary to tilt compensate the compass computation due to any potential hardware inaccuracies or over sensitivity.
+
+Difficulties & What I Learned:
+
+- Difficulties mostly surrounded making a visual application. I learned how to put all my application code into driver files so that they can be used again
+

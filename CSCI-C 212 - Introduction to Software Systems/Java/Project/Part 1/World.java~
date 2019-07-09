@@ -1,0 +1,7 @@
+import java.awt.Graphics;
+
+interface World {
+  public boolean hasEnded(); 
+  public void draw(Graphics g); 
+  public void update(); 
+}

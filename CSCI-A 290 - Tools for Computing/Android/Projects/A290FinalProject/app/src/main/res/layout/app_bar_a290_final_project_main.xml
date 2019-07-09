@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+activity_a290_final_project_main.xml
+
+App Bar Layout for the main activity.
+Auto Generated
+
+Created by: Matthew Lonis
+Created on: 2/27/17
+Last Modified by: Matthew Lonis
+Last Modified on: 3/5/17
+Assignment/Project: A290 Final Project
+Part of: A290FinalProject, refers to A290FinalProjectMainActivity.java
+-->
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="edu.indiana.mrlonis.a290finalproject.A290FinalProjectMainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_a290_final_project_main" />
+
+</android.support.design.widget.CoordinatorLayout>

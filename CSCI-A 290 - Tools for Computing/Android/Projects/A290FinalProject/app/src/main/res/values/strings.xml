@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+strings.xml
+
+String Resources for this Project
+
+Created by: Matthew Lonis
+Created on: 2/27/17
+Last Modified by: Matthew Lonis
+Last Modified on: 3/5/17
+Assignment/Project: A290 Final Project
+Part of: A290FinalProject
+-->
+
+<resources>
+    <string name="app_name">Matthew Lonis A290 Final Project</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- Nav Header Strings -->
+    <string name="matthew_lonis">Matthew Lonis</string>
+    <string name="matthew_email">mrlonis@iu.edu</string>
+
+    <!-- Main Drawer String -->
+    <string name="home">Home</string>
+    <string name="resume">Resume</string>
+    <string name="core_courses">Core Courses</string>
+    <string name="settings">Settings</string>
+    <string name="csci_c211">CSCI-C 211</string>
+    <string name="csci_c212">CSCI-C 212</string>
+    <string name="csci_c343">CSCI-C 343</string>
+    <string name="specialization_courses">Systems Specialization Courses</string>
+    <string name="csci_c291">CSCI-C 291</string>
+    <string name="tools_for_computing">Tools For Computing</string>
+    <string name="csci_a290_c_basics">CSCI-A 290: C &#38; UNIX Basics</string>
+    <string name="csci_a290_windows_programming">CSCI-A 290: Windows Programming with C# &#38; .NET</string>
+    <string name="csci_a290_android">CSCI-A 290: Android Application Interface, Design &#38; Programming</string>
+    <string name="info_i101">INFO-I 101</string>
+
+    <!-- Home Page Fragment -->
+    <string name="about_me">About Me</string>
+    <string name="about_me_description">My name is Matthew Lonis and I am a Junior at IU. My current
+        degree I am pursuing is Computer Science with a specialization in Systems. I am also
+        minoring in Math to better help with problem solving in computer science. My favorite
+        hobbies are making music and playing video games. I also am an avid cat lover and love to
+        have intellectual conversations with people. I can play all kinds of percussion instruments,
+        bass guitar, piano, and make electronic music on my computer as well.</string>
+    <string name="about_this_app">About This App</string>
+    <string name="about_this_app_description">This app is intended to display my Android knowledge
+    that I have aquired at IU\'s A290 Android course. The App features my resume, where you can zoom
+    in and out to view it better, and a master/detail flow containing all my projects
+    I have done while at IU. You will find clickable buttons to view my project source code on
+    GitHub.</string>
+
+    <!-- For all Courses -->
+    <string name="course_info">Course Info</string>
+    <string name="project_1">Project 1</string>
+    <string name="project_2">Project 2</string>
+    <string name="project_3">Project 3</string>
+    <string name="project_4">Project 4</string>
+
+    <!-- CSCI-C 211 -->
+    <string name="csci_c211_course">CSCI-C 211 is the first course in IU\'s computer science cirriculum. The course features an introduction to programming and to algorithm design &#38; analysis. The course utilizes the Scheme programming language. The course aims to cover several programming paradigms.</string>
+    <string name="csci_c211_project1_name">Paint Fill</string>
+    <string name="csci_c211_project1_description">This project required that I make a program in the Racket language that essentially mimicked the paint fill function in Microsoft Paint.</string>
+    <string name="csci_c211_project1_file">a14.rkt</string>
+    <string name="csci_c211_project2_name">Simple Tetris</string>
+    <string name="csci_c211_project2_description">This project recreates a simple Tetris game in the Racket language. This game is very simple and does not feature a menu or any other sort of graphical interface other than the tetris board. The project features a hand-made big-bang.</string>
+    <string name="csci_c211_project2_file">a7.rkt</string>
+    <string name="csci_c211_project3_name">Confetti</string>
+    <string name="csci_c211_project3_description">This project recreates a paint program. The top menu bar features an assortment of colors the user can click on to change the color that they will be painting with. It also includes mouse and keyboard event handlers to change the size of the circle that is being painted as well as to undo and redo previous painting operations.</string>
+    <string name="csci_c211_project3_file">a8.rkt</string>
+    <string name="csci_c211_project4_name">2048</string>
+    <string name="csci_c211_project4_description">This project recreates the game 2048. This follows exactly like the game 2048 however you can choose the board size. There is also no animations during a board slide, however all the logic works out so that you can play the game like you would regular 2048.</string>
+    <string name="csci_c211_project4_file">a11.rkt</string>
+
+    <!-- CSCI-C 212 -->
+    <string name="csci_c212_course">CSCI-C 212 introduced me to the design of computer software systems and provided an introduction to programming in the environment of a contemporary operating system. The topics of this course included a modern object-oriented programming language (Java), building and maintaining large projects, and understanding the operating system interface.</string>
+    <string name="csci_c212_project1_name">Tetris</string>
+    <string name="csci_c212_project1_description">This project recreates the game Tetris in Java. By clicking the link below you can view all the code for this project. All block shapes are implemented in their own separate .java files and all extend the Tetromino.java class.</string>
+    <string name="csci_c212_project1_file">Tetris</string>
+
+    <!-- CSCI-C 343 -->
+    <string name="csci_c343_course">CSCI-C 343 is a course where I conducted a systematic study of data structures encountered in computing problems, structure and use of storage media, methods of representing structured data, and techniques for operating on data structures.</string>
+    <string name="csci_c343_project1_name">Image Palette Similarity</string>
+    <string name="csci_c343_project1_description">In this project I learned how to implement a hash table, including multiple strategies for collision resolution, and then used my own hash table in an application for comparing images. The comparison of images is done by condensing the color spectrum to a bit between 1-8 per channel. From there, colors there colors were added to my HashTable by associating a key (representing the color) with a frequency of occurences in a picture. From there we took the cosine similarity between two HashTables representing two different images and got a value between 0 and 1 (0 being not similar at all and 1 being identical).</string>
+    <string name="csci_c343_project1_file">Palette Similarity</string>
+
+    <!-- CSCI-C 291 -->
+    <string name="csci_c291_course">CSCI-C 291 teaches students to programming in a Unix (Linux) environment using the C language. The key ideas discussed in this course are: the Unix shell, file system and basic shell commands, the emacs text editor, and the C programming language.</string>
+    <string name="csci_c291_project1_name">Assignment 5 (CSCI-C 291, Summer 2016)</string>
+    <string name="csci_c291_project1_description">This project required that I make a program in the C language that allows a user to utilize operations (operations.c) such as add elements, insert elements, and search for a number in a linked list. The user is given a command prompt menu in order to implement these operations (client.c). The use of a Node header (node.h) is also included in each of these files.</string>
+    <string name="csci_c291_project1_file1">operations.c</string>
+    <string name="csci_c291_project1_file2">client.c</string>
+    <string name="csci_c291_project1_file3">node.h</string>
+
+    <!-- CSCI-A 290: C & UNIX Basics -->
+    <string name="csci_a290_c_course">CSCI-A 290 explores various topics in computing. C &#38; UNIX Basic covers an introduction to the C programming langauge and the UNIX operating system.</string>
+    <string name="csci_a290_c_project1_name">Linked Lists</string>
+    <string name="csci_a290_c_project1_description">This project showcases a C program that allows a user to use a menu and manipulate a linked list.</string>
+    <string name="csci_a290_c_project1_file">P4.c</string>
+
+    <!-- CSCI-A 290: Windows -->
+    <string name="csci_a290_windows_course">CSCI-A 290 explores various topics in computing. Windows Programming with C# &#38; .NET introduces students to programming Windows application with C# in Visual Studio.</string>
+    <string name="csci_a290_windows_project1_name">Final Project</string>
+    <string name="csci_a290_windows_project1_description">This project showcases a Windows application that includes many different Views that allow the user to use a calculator, tire size calculator &#38; comparison, and use a unit converter to name a few.</string>
+    <string name="csci_a290_windows_project1_file">Final Project</string>
+
+    <!-- CSCI-A 290: Android -->
+    <string name="csci_a290_android_course">CSCI-A 290 explores various topics in computing. Android Application Interface, Design &#38; Programming introduces students to the design and interface of Android applications as well as hands-on experience to programming an Android application.</string>
+    <string name="csci_a290_android_project1_name">Final Project</string>
+    <string name="csci_a290_android_project1_description">This project is the app you are currently viewing. I wanted to display my understanding of Android, app design, and fluent navigation.</string>
+    <string name="csci_a290_android_project1_file">My App (GitHub)</string>
+
+    <!-- INFO-I 101 -->
+    <string name="info_i101_course">Problem solving with information technology; introductions to information representation, relational databases, system design, propositional logic, cutting-edge technologies: CPU, operation systems, networks; laboratory emphasizing information technology including Web page design, word processing, databases, using tools available on campus.</string>
+    <string name="info_i101_project1_name">Personal Website</string>
+    <string name="info_i101_project1_description">For this project I created a personal website using bootstrap. The website features information about me, my resume, and projects I have completed throughout my time at IU.</string>
+    <string name="info_i101_project1_file">My Website</string>
+
+    <!-- Settings -->
+    <string name="background_color">Background Color</string>
+    <string name="red">Red</string>
+    <string name="blue">Blue</string>
+    <string name="green">Green</string>
+    <string name="black">Black</string>
+    <string name="normal">Default</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_item_list">Items</string>
+    <string name="title_item_detail">Item Detail</string>
+    <string name="title_project_list">Projects</string>
+    <string name="title_project_detail">Project Detail</string>
+</resources>

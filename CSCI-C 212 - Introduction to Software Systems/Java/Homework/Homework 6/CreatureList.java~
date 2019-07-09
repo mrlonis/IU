@@ -1,0 +1,13 @@
+import java.util.ArrayList;
+
+public class CreatureList {
+  public static void main(String[] args) {
+    Creature creatureList[];
+    creatureList[0] = new Cow("Clarabella");
+    creatureList[1] = new Dolphin("Flipper");
+    creatureList[2] = new Bass("Adele");
+    creatureList[3] = new Guppy("Riddick");
+    
+    creatureList[0].details();
+  }
+}

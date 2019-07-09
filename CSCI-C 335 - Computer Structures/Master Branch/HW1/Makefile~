@@ -1,0 +1,65 @@
+OBJS = test.o t1.o
+
+# name of executable
+
+ELF = $(notdir $(CURDIR)).elf                    
+BIN = $(notdir $(CURDIR)).bin
+
+# Tool path
+
+TOOLROOT = /l/arm2/devtools/bin/
+
+# Tools
+
+CC = $(TOOLROOT)/arm-none-eabi-gcc
+GAS = $(TOOLROOT)/arm-none-eabi-gcc
+DD = $(TOOLROOT)/arm-none-eabi-gcc
+LD = $(TOOLROOT)/arm-none-eabi-gcc
+OC = $(TOOLROOT)/arm-none-eabi-objcopy
+GP = grep
+RM = rm
+AR = $(TOOLROOT)/arm-none-eabi-ar
+AS = $(TOOLROOT)/arm-none-eabi-as
+OBJCOPY = $(TOOLROOT)/arm-none-eabi-objcopy
+QEMU = $(TOOLROOT)/qemu-system-arm
+
+# Flags
+
+CFLAGS = -g -mcpu=cortex-m0 -mthumb
+LDFLAGS = -g -mcpu=cortex-m0 -mthumb --specs=rdimon.specs -lc -lrdimon
+ASFLAGS = -g -mcpu=cortex-m0 -mthumb
+QEMUFLAGS = -machine versatilepb -cpu cortex-m3 -nographic -monitor null -serial null -semihosting -kernel
+
+# Build executable 
+
+HW1.elf : $(OBJS)
+	$(LD) $(LDFLAGS) -o $@ $(OBJS)
+
+# compile and generate dependency info
+
+test.s: test.c
+	$(CC) -c $(CFLAGS) -S -o test.s test.c
+
+test.o: test.c
+	$(CC) -c $(CFLAGS) -o test.o test.c
+
+t1.o: t1.s
+	$(AS) -c $(ASFLAGS) -o t1.o t1.s
+
+HW1.bin: HW1.elf
+	$(OC) -O binary HW1.bin
+
+clean:
+	$(RM) -f $(OBJS) $(OBJS:.o=.d) HW1.elf
+
+<<<<<<< HEAD
+all: $(ELF)
+=======
+debug: HW1.elf
+	arm-none-eabi-gdb HW1.elf
+
+all: HW1.elf test.s
+
+test: HW1.elf
+	$(QEMU) $(QEMUFLAGS) HW1.elf
+>>>>>>> 2c229291540e24ff38176892b0b65cc80d284251

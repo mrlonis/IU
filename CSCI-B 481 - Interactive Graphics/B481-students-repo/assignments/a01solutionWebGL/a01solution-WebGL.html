@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script id="vertex-shader" type="x-shader/x-vertex">
+
+uniform float u_Width;
+uniform float u_Height;
+
+attribute vec4 a_Position;
+
+varying vec2 var_Position;
+
+mat4 myOrtho2D(float pLeft, float pRight, float pBottom, float pTop) {
+    float lNear = -1.0;
+    float lFar = 1.0;
+    float rl = pRight-pLeft;
+    float tb = pTop-pBottom;
+    float fn = lFar-lNear;
+    // the returned matrix is defined "transposed", i.e. the last row
+    //   is really the last column as used in matrix multiplication:
+    return mat4(  2.0/rl,                0.0,              0.0,  0.0,
+                     0.0,             2.0/tb,              0.0,  0.0,
+                     0.0,                0.0,          -2.0/fn,  0.0,
+      -(pRight+pLeft)/rl, -(pTop+pBottom)/tb, -(lFar+lNear)/fn,  1.0 );
+}
+
+void
+main()
+{
+    mat4 projectionMatrix = myOrtho2D(0.0, u_Width, 0.0, u_Height);
+
+    gl_PointSize = 10.0;
+    
+    gl_Position = projectionMatrix * a_Position;
+    
+    // the value for var_Position is set in this vertex shader,
+    // then it goes through the interpolator before being
+    // received (interpolated!) by a fragment shader:
+    var_Position = gl_Position.xy;
+}
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+
+precision mediump float;
+
+varying vec2 var_Position;
+
+uniform vec4 u_Color;
+
+void main() {
+    // TODO: try using the varying var_Position variable from the vertex shader
+    // to set color values smoothly varying within a line segment:
+    // e.g. from full color on one vertex,
+    //   to another color in the middle of the line segment,
+    //   and back to full color on the other vertex
+    // Hint: you may use abs(...)
+    gl_FragColor = vec4( u_Color.r, u_Color.g, u_Color.b, u_Color.a );
+}
+
+</script>
+
+<script type="text/javascript" src="./Common/webgl-utils.js"></script>
+<script type="text/javascript" src="./Common/initShaders.js"></script>
+<script type="text/javascript" src="a01solution-WebGL.js"></script>
+</head>
+
+<body>
+
+<canvas id="gl-canvas" width="512" height="512">
+Oops ... your browser doesn't support the HTML5 canvas element
+</canvas>
+</body>
+</html>

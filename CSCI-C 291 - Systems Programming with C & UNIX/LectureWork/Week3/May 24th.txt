@@ -1,0 +1,47 @@
+DataTypes:
+
+Char 8 bit
+Short 16 bit
+Int 32 bit
+Long 32 bit
+Long long 32 bit
+Float
+Doubls
+
+#include <stdio.h>
+
+void main(void) {
+	int i = 3;
+	int *p = &i; #; *p -> Declaring a pointer p, pointing to an integer
+		     #; &i-> Reference creation; address "of". This holds the address for i
+	int j = *p; #; Dereference operator -> *p. Takes value from the address of the reference 			       *p and stores it in j
+		    #; Gets the address stored in *p and then goes to the address to find the 			       actual value at that address
+	int foo[100] = {0, 1, 2, ... 99};
+	p = &foo;
+	printf("%d\n", *p);
+		P++;
+	printf("%d\n, *p);
+
+	char c = 'a;
+	char s[] = "test";
+	char *p;
+	p = &c;
+	printf("%c\n", *p); #; Prints 'a
+	p = &s;
+	printf("%s\n", *p); #; %s -> prints out a string in this case "test"
+
+	int *ptr;
+	int k;
+	ptr = &k;
+	k = 3;
+	if (*ptr == k) {	#; This is currently true. *ptr pulls the value from the reference at ptr which is 3.
+	}
+	*ptr = 4;
+	if (k == 4) {	#; This is true as well
+	}	
+}
+
+
+#include<stdio.h>
+
+int myString (char *string-pointer){ #; function prototype -> ReturnType Name Arguments

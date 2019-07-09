@@ -1,0 +1,1 @@
+I created folders for 'lab', 'homework', and 'assignments' as described in step 4 of the lab instructions. I also made a subfolder within the 'lab' folder called 'lab01'.

@@ -1,0 +1,12 @@
+Name: Matthew Lonis
+Username: mrlonis
+
+Results: I was able to accomplish everything required for me by the lab.
+
+Difficulties: I found difficulty in both parts of this lab. For mywc, I found getchar() to be confusing at first. I didn't, at first, like the idea of my inout not being stored in an array.
+
+As i became more familiar with the code and how it works, i found it to be an easier way to accomplish the goal.
+
+With poly.c and dump.c, I had difficulty figuring out how to get my output the match up with the output that is expected on the assignment page. I eventually figured it out with the help of the AIs. My biggest challenge was figuring out why shorts, ints, floats, and doubles would print out on some lines in the example and not on other lines. I eventually found the pattern and it became a quick problem to solve.
+
+What I Learned: I learned that printf has far my conversion types as well as flags, parameters, widths, etc. that can all be applied to be used within printf. I also learned how to work with user input using getchar() rather than scanf().

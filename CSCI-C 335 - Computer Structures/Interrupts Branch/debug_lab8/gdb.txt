@@ -1,0 +1,43 @@
+/**
+ * gdb.txt
+ *
+ * Created By: Matthew Lonis
+ * Created On: 20 October 2017
+ * Last Modified By: Matthew Lonis
+ * Last Modified On: 20 October 2017
+ */
+
+/****************************************\
+/** Register printout GDB checkpoint 1 **\
+/****************************************\
+
+r1     	       0x0	0
+r2     	       0x8000000        134217728
+r3     	       0xe000ed00	3758157056
+r4     	       0xa04	2564
+r5     	       0x0	0
+r6     	       0x0	0
+r7     	       0x0	0
+r8     	       0x0	0
+r9     	       0x0	0
+r10    	       0x0	0
+r11    	       0x0	0
+r12    	       0x0	0
+sp     	       0x20009ff8	0x20009ff8
+lr     	       0x8000273        134218355
+pc     	       0x800044c        0x800044c <main>
+cpsr   	       0x61000000	1627389952
+
+/******************\
+/** Checkpoint 2 **\
+/******************\
+
+Breakpoint 2, encryptStr (phrase=0x80156cc "isual", 
+    phrase@entry=0x80156b8 "cow", key=0x80156be "G", 
+    key@entry=0x80156bc "PIG", 
+    ncrypt=ncrypt@entry=0x20009fec "3&0P\031\016\027I\023\071%3p\b)7%\"p\037"<Address 0x2000a000 out of	bounds
+>) at main.c:63
+
+(gdb) cont
+Continuing.
+

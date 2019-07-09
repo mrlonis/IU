@@ -1,0 +1,57 @@
+Final Project "C335 Defense"
+
+
+By Matthew Lonis & Alvaro Michael
+
+
+Description of Game Concept:
+
+
+The game we made for this project is a tower defense games. We drew our inspiration from games 
+like Bloons Tower Defense 5 or many of the other clones that exist out in the market today.
+
+
+Core Functionality:
+
+
+The core functionality of our game focuses around user input and whether or not the game is 
+paused or not. If the game is paused, the user input is at the forefront of focus for the game. 
+
+When the game is paused, the user will be to move around with a selection that highlights things 
+white. The user will always start out in tower selection mode in which they can select along the 
+bottom part of the screen which tower they would like to select. If and only if user input is 
+detect, will the game do something while paused which makes the controls feel snappy and keep 
+the game responsive.
+
+When the game isn't paused, the towers (setup by the user) and the enemies (pre-built in an array 
+whenever a new round starts), move and attack. If a tower reaches the end of the red path, the 
+player loses a life. If the players life equals 0, the game is over and the credits pop-up,
+ playing thermo.wav and detailing on the LCD who made the game.
+
+
+Tasks:
+
+
+Both of us completed every task together. We did this entire project as a team and as such, did 
+not break tasks down to be given to each person. So instead od detailing who did what task, we 
+will simply break down the tasks for you here. Each .c file is like a class in its own way. 
+Main.c swaps between them using codes as you will see in the file.
+
+       1. Create main.c to swap between the gameMenu.c, credits.c, and newGame.c.
+       2. Create gameMenu.c which allows the user to select either newGame.c or credits.c
+       3. Create credits.c which plays a sound over and over again while also displaying details 
+       	  about who made the game and what the game is.
+       4. Create newGame.c to control the game logic
+       	  4a. Draw everything that needs to be drawn on the screen. This included figuring out all 
+	      the correct coordinates and separating the game screen into a top, middle, and bottom 
+	      section. Create functions that draw the initial layout of the screen as soon as a new 
+	      game is started
+	  4b. The top section displays the round # and if the game is paused or not. Created functions 
+	      to draw title.
+	  4c. The middle section controls drawing enemys, towers, the path, and user movement during 
+	      tower placement. Created functions to quickly draw enemies, towers, the path, etc.
+	  4d. The bottom section controls the user tower selection before tower placement as well as 
+	      displaying lives and money.
+       5. Accelerometer functionality which essentially kills all enemies on the board and moves to 
+       	  the next round
+       6. Fine tune tower and enemy strengths to make the game more playable.

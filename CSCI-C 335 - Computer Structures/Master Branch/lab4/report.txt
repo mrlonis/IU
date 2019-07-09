@@ -1,0 +1,35 @@
+report.txt
+
+Created By: Matthew Lonis (mrlonis)
+Created On: 15 September 2017
+Last Modified By: Matthew Lonis
+Last Modified On: 15 September 2017
+Part Of: Lab 4
+
+Partner: Alvaro Michael
+
+Questions:
+---------------------------
+1. How many connections are required to communicate over UART?
+
+   - 2: One from the PC4 pin to USB-Serial Pin RX and another one from pin PC5 to USB-Serial Pin TX.
+
+2. What is the purpose of "alternate functions" for GPIO pins?
+
+   - The purpose of "alternate functiond" for GPIO pins is to allow certain pins multile mappins, routins, or functions. For example, PC4 and PC5 can either be EVENTOUT is given the alternate function of AF1 but can be routed to USART1_TX and USART1_RX by using the alternate function AF7.
+
+3. Define "baud rate" in your own words.
+
+   - A "baud rate" is the rate at which information (in this case bits) are transferred per second. So if we have a baud rate of 100, we know that 100 bits are transferred every 1 second.
+
+4. Why do we need newlib_stubs? Specifically, is there a reason that printf won't work on the board without it?
+
+   - We need newlib_stubs because it is a port of standard C libraries that do not depend on an operating system. We need this for our board because our board does not have an operating system. This is why printf wont work without it.
+
+5. Give an example of a situation in which the Salae Logic Analyzer is the best debugging method and include a screen shot of the Logic application.
+
+	- The best example I can think of to use the Salae Logic Analyzer is to test and see if the hardware on the board is responding to as program. It will be useful to test if GPIO pins have been initialized, for example. See screenshot in lab 4 root folder.
+
+6. What did you learn, any difficulties you had?
+
+	- I had difficulties

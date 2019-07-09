@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+content_android_calling_main.xml
+
+Primary Layout file for this Project
+
+Created by: Matthew Lonis
+Created on: 1/17/17
+Last Modified by: Matthew Lonis
+Last Modified on: 1/26/17
+Assignment/Project: A290 Android Development
+Part of: Android Calling Project, refers to AndroidCallingMainActivity.java
+-->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_android_calling_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="edu.indiana.mrlonis.androidcalling.AndroidCallingMainActivity"
+    tools:showIn="@layout/activity_android_calling_main"
+    tools:targetApi="21">
+
+    <!--
+    Code for the TextClock.
+    This is centered Horizontally
+     -->
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/firstClock"
+        android:layout_marginTop="29dp"
+        android:layout_marginLeft="100dp"
+        android:layout_centerHorizontal="true" />
+
+    <!--
+    Code for the Button that says "My first button"
+    This is aligned with the text clock
+    This is also centered horizontally
+     -->
+    <Button
+        android:text="@string/FirstButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/myFirstButton"
+        android:layout_marginTop="60dp"
+        android:layout_centerHorizontal="true" />
+
+    <!--
+    Code for the first Large Text View
+    This is justified Right
+    This is aligned vertically with "likeCheck" CheckBox
+    -->
+    <TextView
+        android:text="@string/FirstLargeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/myFirstLargeTextView"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="1dp"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:layout_alignParentRight="true" />
+
+    <!--
+    Code for the Hello Universe! Text View
+    This is justified left
+    -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_universe"
+        android:id="@+id/helloMessage"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true" />
+
+    <!--
+    Code for the CheckBox that is next to Large Text View
+    This is aligned left
+    This is vertically justified next to the large text view
+    -->
+    <CheckBox
+        android:text="Like?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/likeCheck"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="1dp"
+        android:layout_alignParentLeft="true" />
+</RelativeLayout>

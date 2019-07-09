@@ -1,0 +1,3 @@
+To reset QEMU:
+
+Press Control-A, then press X

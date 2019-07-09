@@ -1,0 +1,37 @@
+body {
+	padding-top: 100px;
+}
+div.menuDiv {
+	width: 90%;
+	height: 10%;
+	align-content: center;
+}
+table.menu {
+	border-width: 1px;
+	border-color: black;
+	border-style: outset;
+	width: 95%;
+	align: center;
+	padding: 0px;
+	border-collapse: collapse;
+	vertical-align: middle;
+}
+.iucrimson {
+	color: #990000;
+}
+
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: gold;
+}
+
+a:hover {
+    color: gold;
+}
+
+a:active {
+    color: gold;
+}

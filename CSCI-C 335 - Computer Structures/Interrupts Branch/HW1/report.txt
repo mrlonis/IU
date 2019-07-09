@@ -1,0 +1,81 @@
+report.txt
+
+Created By: Matthew Lonis
+Created On: 11 September 2017
+Last Modified By: Matthew Lonis
+Last Modified On: 16 September 2017
+Part Of: HW1
+
+Answer the following questions regarding the HW1.elf file. Add 
+information to a file called report.txt.
+
+/*********************************************************\
+/** Address and size of global variable state. (10 pts) **\
+/*********************************************************\
+
+By viewing my test.dump file, you will see the following on lines 85-91:
+
+85	Disassembly of section .bss:
+86
+87	00000000 <state>:
+88	   0:	00000000 	andeq	r0, r0, r0
+89
+90	00000004 <state_counter.4968>:
+91	   4:	00000000 	andeq	r0, r0, r0
+
+The assembly output to me seems as though the state variable is taking 
+up 4 bytes and starts at the address 0x00000000
+
+/*****************************************************************\
+/** Address and size of global variable state_counter. (10 pts) **\
+/*****************************************************************\
+
+By viewing my test.dump file, you will see the following on lines 85-91:
+
+85	Disassembly of section .bss:
+86
+87	00000000 <state>:
+88	   0:	00000000 	andeq	r0, r0, r0
+89
+90	00000004 <state_counter.4968>:
+91	   4:	00000000 	andeq	r0, r0, r0
+
+The assembly output to me seems as though the state variable is taking up 4 
+bytes and starts at the address 0x00000004
+
+/******************************************************************\
+/** Starting address and size of function stop_light(). (10 pts) **\
+/******************************************************************\
+
+By viewing my test.dump file, you will see, on lines 85-91, that stop_light() 
+starts at the address 0x00000000 and ends at the address 0x0000008c. This to
+me tells me that the function stop_light() takes up 140 bits.
+
+/***********************************************************\
+/** Starting address and size of function inc(). (10 pts) **\
+/***********************************************************\
+
+By viewing my t1.dump file, you will see, on lines 7-9, that inc() 
+starts at the address 0x00000000 and ends at the address 0x0000002. This to
+me tells me that the function inc() takes up 4 bits. I determined the
+bx aseembly operation was also 2 bits because in my test.dump file at lines
+77-79, when inc is called, the address is increased from 9a -> 9e, which is 
+4 bits.
+
+/**********************************************************\
+/** Largest function in the executable HW1.elf. (10 pts) **\
+/**********************************************************\
+
+By viewing test.dump, we can see that main() starts at address 0x00000090 and 
+ends at address 0x000000a6. This is 166 - 144 = 22 bits. This tells me that stop_light()
+is the largest function in the executable HW1.elf.
+
+/***************************************************************\
+/** Overall size of the executable HW1.elf in bytes. (10 pts) **\
+/***************************************************************\
+
+The overall size of HW1.elf can be easily determined by calculating its true size 
+based on the bytes. The bytes of HW1.elf can be determined by analyzing the file. On a mac,
+I am simply using "Get Info" to determine the bytes of HW1.elf. The bytes for my HW1.elf are 
+60,303. If we wanted to, we could multiply this number by 8 to get the total number of bits.
+The total number of bits is 482,424.

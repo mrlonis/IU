@@ -1,0 +1,10 @@
+/*
+What is the output of the following program? Explain.
+class One {
+  public static void main(String[] args) {
+    int x = 3, y = 5;
+    int b = x++ + y++ - ++y - ++x;
+    System.out.println( x + " " + y + " " + b );
+  }
+}
+*/

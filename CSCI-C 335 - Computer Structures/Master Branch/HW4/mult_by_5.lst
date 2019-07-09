@@ -1,0 +1,12 @@
+
+mult_by_5.o:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <mult_by_5>:
+   0:	b4f0      	push	{r4, r5, r6, r7}
+   2:	0083      	lsls	r3, r0, #2
+   4:	1818      	adds	r0, r3, r0
+   6:	bcf0      	pop	{r4, r5, r6, r7}
+   8:	4770      	bx	lr

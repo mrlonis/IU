@@ -1,0 +1,68 @@
+//
+//  Shader.vsh
+//  lab14
+//
+//  Created by Mitja Hmeljak on 2018-04-20.
+//  Copyright © 2018 B481/B581 Spring 2018. All rights reserved.
+//
+
+#version 300 es
+
+// define incoming variables:
+
+uniform float u_Width;                // viewport dimensions
+uniform float u_Height;
+
+in vec4 a_Position;                   // input vertex coordinates
+in vec2 a_TextureCoordinates;         // input texture coordinate for vertex
+
+in vec4 a_Color;  // here we could receive a color for the current vertex,
+                  //    which could be then used in an illumination equation
+
+
+// define  outgoing variables:
+
+out vec2 var_Position;                // output coordinate-dependent value
+out vec2 var_TextureCoordinates;      // output texture coordinate for vertex
+
+
+
+// a function to compute 2D orthogonal projection:
+mat4 myOrtho2D(float pLeft, float pRight, float pBottom, float pTop) {
+    float lNear = -1.0;
+    float lFar = 1.0;
+    float rl = pRight-pLeft;
+    float tb = pTop-pBottom;
+    float fn = lFar-lNear;
+    // the returned matrix is defined "transposed", i.e. the last row
+    //   is really the last column as used in matrix multiplication:
+    return mat4(  2.0/rl,                0.0,              0.0,  0.0,
+                0.0,             2.0/tb,              0.0,  0.0,
+                0.0,                0.0,          -2.0/fn,  0.0,
+                -(pRight+pLeft)/rl, -(pTop+pBottom)/tb, -(lFar+lNear)/fn,  1.0 );
+}
+
+
+// the main program for the Vertex Shader
+void main() {
+
+    mat4 projectionMatrix = myOrtho2D(0.0, u_Width, 0.0, u_Height);
+
+    gl_PointSize = 10.0;
+
+    // *the* compulsory output from any vertex shader,
+    //    i.e. computed vertex position in NDC range:
+    gl_Position = projectionMatrix * a_Position;
+
+    // output texture coordinates,  set here in the vertex shader,
+    //    are then sent to the interpolator before being
+    //    received (interpolated!) by a fragment shader:
+    var_TextureCoordinates = a_TextureCoordinates; //textureMatr * a_TextureCoordinates;
+
+
+    // the value for var_Position is set here in the vertex shader,
+    //    then it is sent through the interpolator before being
+    //    received (interpolated!) by a fragment shader:
+    var_Position = gl_Position.xy;
+}
+

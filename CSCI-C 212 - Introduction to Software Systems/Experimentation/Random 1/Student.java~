@@ -1,0 +1,11 @@
+class Student {
+  String fName;
+  String lName;
+  int ID;
+  
+  Student (String fName, String lName, int ID) {
+    this.fName = fName;
+    this.lName = lName;
+    this.ID = ID;
+  }
+}

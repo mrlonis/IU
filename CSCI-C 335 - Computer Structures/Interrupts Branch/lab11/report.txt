@@ -1,0 +1,27 @@
+Q1. What is the significance of the peripheral base address? Where does it point?
+
+Set SPI base address is the address to the SPI data register.
+
+Q2. Why is it necessary to enable incrementing as was done in this step? What will the DMA controller do in response to this configuration.
+
+Incrementing was done so that all read/writes are from a single DR register.
+
+Q3. Why is this line of the code necessary?
+
+To wait for completion of DMA
+
+Q4. For transfers of less than 4 bytes, what do you think is the reason for not using the xchng_datablock functions?
+
+4 bytes is a small amount and would be better to process normally so as to keep the CPU not idle for so long
+
+Q5. Why is it important for the DMA controller and the audio player to work on differnt portions of Audiobuf.
+
+So that audio can constantly be buffered in so it plays and sounds normal
+
+6. Difficulties & What I Learned:
+
+SD card was a pain in the but AND NO ONE SPECIFIED THAT THE AUDIO FILES HAVE TO HAVE A SMAPLE RATE OF 11025 KBPS AND A BIT-DEPTH OF 8!!!! MADE THIS LAB ALMOST IMPOSSIBLE.
+
+I learned how to make 11025 8-bit wav files
+
+

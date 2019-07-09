@@ -1,0 +1,86 @@
+
+t1.o:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <inc>:
+   0:	3001      	adds	r0, #1
+   2:	4770      	bx	lr
+
+Disassembly of section .ARM.attributes:
+
+00000000 <.ARM.attributes>:
+   0:	00002041 	andeq	r2, r0, r1, asr #32
+   4:	61656100 	cmnvs	r5, r0, lsl #2
+   8:	01006962 	tsteq	r0, r2, ror #18
+   c:	00000016 	andeq	r0, r0, r6, lsl r0
+  10:	726f4305 	rsbvc	r4, pc, #335544320	; 0x14000000
+  14:	2d786574 	cfldr64cs	mvdx6, [r8, #-464]!	; 0xfffffe30
+  18:	0600304d 	streq	r3, [r0], -sp, asr #32
+  1c:	094d070c 	stmdbeq	sp, {r2, r3, r8, r9, sl}^
+  20:	Address 0x00000020 is out of bounds.
+
+
+Disassembly of section .debug_line:
+
+00000000 <.debug_line>:
+   0:	ebebebeb 	bl	ffafafb4 <inc+0xffafafb4>
+   4:	ebebebeb 	bl	ffafafb8 <inc+0xffafafb8>
+   8:	ebebebeb 	bl	ffafafbc <inc+0xffafafbc>
+   c:	ebebebeb 	bl	ffafafc0 <inc+0xffafafc0>
+  10:	ebebebeb 	bl	ffafafc4 <inc+0xffafafc4>
+  14:	ebebebeb 	bl	ffafafc8 <inc+0xffafafc8>
+  18:	ebebebeb 	bl	ffafafcc <inc+0xffafafcc>
+  1c:	ebebebeb 	bl	ffafafd0 <inc+0xffafafd0>
+  20:	ebebebeb 	bl	ffafafd4 <inc+0xffafafd4>
+  24:	ebebebeb 	bl	ffafafd8 <inc+0xffafafd8>
+  28:	ebebebeb 	bl	ffafafb4 <inc+0xffafafb4>
+  2c:	ebebebeb 	bl	ffafafe0 <inc+0xffafafe0>
+  30:	Address 0x00000030 is out of bounds.
+
+
+Disassembly of section .debug_info:
+
+00000000 <.debug_info>:
+   0:	ebebebeb 	bl	ffafafb4 <inc+0xffafafb4>
+   4:	ebebebeb 	bl	ffafafb4 <inc+0xffafafb4>
+   8:	ebebebeb 	bl	ffafafbc <inc+0xffafafbc>
+   c:	ebebebeb 	bl	ffafafb4 <inc+0xffafafb4>
+  10:	ebebebeb 	bl	ffafafb4 <inc+0xffafafb4>
+  14:	ebebebeb 	bl	ffafafb4 <inc+0xffafafb4>
+  18:	ebebebeb 	bl	ffafafcc <inc+0xffafafcc>
+  1c:	ebebebeb 	bl	ffafafd0 <inc+0xffafafd0>
+  20:	ebebebeb 	bl	ffafafd4 <inc+0xffafafd4>
+  24:	ebebebeb 	bl	ffafafd8 <inc+0xffafafd8>
+  28:	ebebebeb 	bl	ffafafdc <inc+0xffafafdc>
+  2c:	ebebebeb 	bl	ffafafe0 <inc+0xffafafe0>
+  30:	ebebebeb 	bl	ffafafe4 <inc+0xffafafe4>
+  34:	ebebebeb 	bl	ffafafe8 <inc+0xffafafe8>
+  38:	ebebebeb 	bl	ffafafec <inc+0xffafafec>
+  3c:	ebebebeb 	bl	ffafaff0 <inc+0xffafaff0>
+  40:	ebebebeb 	bl	ffafaff4 <inc+0xffafaff4>
+  44:	ebebebeb 	bl	ffafaff8 <inc+0xffafaff8>
+  48:	Address 0x00000048 is out of bounds.
+
+
+Disassembly of section .debug_abbrev:
+
+00000000 <.debug_abbrev>:
+   0:	10001101 	andne	r1, r0, r1, lsl #2
+   4:	12011106 	andne	r1, r1, #-2147483647	; 0x80000001
+   8:	1b080301 	blne	200c14 <inc+0x200c14>
+   c:	13082508 	movwne	r2, #34056	; 0x8508
+  10:	00000005 	andeq	r0, r0, r5
+
+Disassembly of section .debug_aranges:
+
+00000000 <.debug_aranges>:
+   0:	ebebebeb 	bl	ffafafb4 <inc+0xffafafb4>
+   4:	ebebebeb 	bl	ffafafb4 <inc+0xffafafb4>
+   8:	ebebebeb 	bl	ffafafbc <inc+0xffafafbc>
+   c:	ebebebeb 	bl	ffafafc0 <inc+0xffafafc0>
+  10:	ebebebeb 	bl	ffafafb4 <inc+0xffafafb4>
+  14:	ebebebeb 	bl	ffafafc8 <inc+0xffafafc8>
+  18:	ebebebeb 	bl	ffafafcc <inc+0xffafafcc>
+  1c:	ebebebeb 	bl	ffafafd0 <inc+0xffafafd0>

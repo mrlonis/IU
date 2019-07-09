@@ -1,0 +1,39 @@
+import java.util.Scanner;
+ 
+class HomeworkTwo3 {
+    public static void main (String [] args) {       
+        double sum = 0;
+        int count = 0;
+        double largest = 0;
+        double smallest = 0;
+        double range = 0;
+         
+        Scanner in = new Scanner(System.in);
+        //Process values when sentinel is entered.
+        
+        System.out.println("Enter a number: ");
+        while (in.nextLine() != "bye") {
+            double value = in.nextDouble();
+            {
+            //Find average
+                sum = sum + value;
+                count++;
+                double average = sum/count;
+                if (value > largest);
+                {
+                    largest = value;
+                }
+                if (value < smallest);
+                {
+                    smallest = value;
+                    range = largest - smallest;
+                }
+            System.out.println("The average is: " + average);
+            System.out.println("The largest is: " + largest);
+            System.out.println("The smallest is: " + smallest);
+            System.out.println("The range is: " + range);
+        }
+         
+    }
+}
+}

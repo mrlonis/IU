@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DE71801D-23DC-427A-9B74-876CA2A59C6B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>A290FinalProject</RootNamespace>
+    <AssemblyName>A290FinalProject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="formA290Buffet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formA290Buffet.Designer.cs">
+      <DependentUpon>formA290Buffet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formCalculator.Designer.cs">
+      <DependentUpon>formCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formCalculatorHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formCalculatorHelp.Designer.cs">
+      <DependentUpon>formCalculatorHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formFuelMileageCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formFuelMileageCalculator.Designer.cs">
+      <DependentUpon>formFuelMileageCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formInformation.Designer.cs">
+      <DependentUpon>formInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formMain.Designer.cs">
+      <DependentUpon>formMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formOptions.Designer.cs">
+      <DependentUpon>formOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formTireComparison.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formTireComparison.Designer.cs">
+      <DependentUpon>formTireComparison.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formTireSizeCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formTireSizeCalculator.Designer.cs">
+      <DependentUpon>formTireSizeCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formUnitConverter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formUnitConverter.Designer.cs">
+      <DependentUpon>formUnitConverter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="formA290Buffet.resx">
+      <DependentUpon>formA290Buffet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formCalculator.resx">
+      <DependentUpon>formCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formCalculatorHelp.resx">
+      <DependentUpon>formCalculatorHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formFuelMileageCalculator.resx">
+      <DependentUpon>formFuelMileageCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formInformation.resx">
+      <DependentUpon>formInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formMain.resx">
+      <DependentUpon>formMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formOptions.resx">
+      <DependentUpon>formOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formTireComparison.resx">
+      <DependentUpon>formTireComparison.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formTireSizeCalculator.resx">
+      <DependentUpon>formTireSizeCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formUnitConverter.resx">
+      <DependentUpon>formUnitConverter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Senior Picture.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Senior Picture.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons8-Ios7-Logos-Register-Editor.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,11 @@
+C:\Users\Matthew's Dell XPS\Desktop\Visual Studio 2015 Projects\RPNCalculator\RPNCalculator\bin\Debug\RPNCalculator.exe.config
+C:\Users\Matthew's Dell XPS\Desktop\Visual Studio 2015 Projects\RPNCalculator\RPNCalculator\bin\Debug\RPNCalculator.exe
+C:\Users\Matthew's Dell XPS\Desktop\Visual Studio 2015 Projects\RPNCalculator\RPNCalculator\bin\Debug\RPNCalculator.pdb
+C:\Users\Matthew's Dell XPS\Desktop\Visual Studio 2015 Projects\RPNCalculator\RPNCalculator\obj\Debug\RPNCalculator.csprojResolveAssemblyReference.cache
+C:\Users\Matthew's Dell XPS\Desktop\Visual Studio 2015 Projects\RPNCalculator\RPNCalculator\obj\Debug\RPNCalculator.Properties.Resources.resources
+C:\Users\Matthew's Dell XPS\Desktop\Visual Studio 2015 Projects\RPNCalculator\RPNCalculator\obj\Debug\RPNCalculator.RPNCalculator.resources
+C:\Users\Matthew's Dell XPS\Desktop\Visual Studio 2015 Projects\RPNCalculator\RPNCalculator\obj\Debug\RPNCalculator.csproj.GenerateResource.Cache
+C:\Users\Matthew's Dell XPS\Desktop\Visual Studio 2015 Projects\RPNCalculator\RPNCalculator\obj\Debug\RPNCalculator.exe
+C:\Users\Matthew's Dell XPS\Desktop\Visual Studio 2015 Projects\RPNCalculator\RPNCalculator\obj\Debug\RPNCalculator.pdb
+C:\Users\Matthew's Dell XPS\Desktop\Visual Studio 2015 Projects\RPNCalculator\RPNCalculator\obj\Debug\RPNCalculator.formHelp.resources
+C:\Users\Matthew's Dell XPS\Desktop\Visual Studio 2015 Projects\RPNCalculator\RPNCalculator\obj\Debug\RPNCalculator.formOptions.resources

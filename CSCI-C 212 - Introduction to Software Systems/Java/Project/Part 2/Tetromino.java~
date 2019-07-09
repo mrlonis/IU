@@ -1,0 +1,57 @@
+import java.awt.Graphics;
+import java.awt.Color;
+
+public class Tetromino {
+  public boolean overlaps(Ground g) {
+    if (this.tooLow())
+      return true; 
+    for (Tetromino t : g) 
+      if (t.overlaps(this))
+        return true; 
+    return false; 
+  }
+  public boolean overlaps(Tetromino t) {
+    return 
+         Math.max(this.x, t.x) <= Math.min(this.x + this.width, t.x + t.width) 
+      && Math.max(this.y, t.y) <= Math.min(this.y + this.height, t.y + t.height); 
+  }
+
+  private boolean tooLow() {
+    if (this.y + this.height > 400) 
+      return true; 
+    else 
+      return false; 
+  }
+
+  private int x, y; 
+  private int width, height; 
+  
+  private Color color; 
+  
+  public Tetromino(int x, int y) {
+    this.x = x;
+    this.y = y; 
+    this.width = (int) (Math.random() * 30 + 20); 
+    this.height = (int) (Math.random() * 30 + 20); 
+    this.color = new Color((float) (Math.random() / 2 + 0.5), 
+                           (float) (Math.random() / 2 + 0.5), 
+                           (float) (Math.random() / 2 + 0.5)
+                          ); 
+  }
+  public void fall() {
+    this.y += 10;  
+  }
+  public void moveLeft() {
+    this.x -= 5;  
+  }
+  public void moveRight() {
+    this.x += 5;  
+  }
+  public void draw(Graphics g) {
+    // g.drawString("I'm a Tetromino", this.x, this.y);  
+    g.setColor(this.color); 
+    g.fillRect(this.x, this.y, this.width, this.height);    
+    g.setColor(Color.BLACK); 
+    g.drawRect(this.x, this.y, this.width, this.height);    
+  }
+}

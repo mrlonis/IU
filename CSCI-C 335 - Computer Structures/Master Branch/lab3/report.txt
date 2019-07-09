@@ -1,0 +1,52 @@
+/*********************************
+ * report.txt
+ *
+ * Answers the lab questions for lab 3
+ *
+ * Created By: Matthew Lonis
+ * Created On: 8 September 2017
+ * Last Modified By: Matthew Lonis
+ * Last Modified On: 13 September 2017
+ * Part Of: Lab 3
+ *
+ * Lab Partner: Nathan Lowry (ndlowry)
+ *********************************/
+
+Anwer these questions:
+
+1. What are specs of the board you are using (ex. Speed, RAM, Flash)?
+
+Flash: 128 KB
+RRAM: 8 KB
+Processor: Cortex-M3
+Speed: 24 Mhz
+
+2. What does GPIO stand for?
+
+General-purpose Input/Output
+
+3. Is the provided delay function accurate? Why or why not? EDIT This question will be disregarded as this delay function does not have parameter. Sorry for the confusion
+
+- This problem is ignored since the delay function takes no parameter.
+
+4. What are the Port and Pin Numbers of the two Green LEDs?
+
+Port: GPIOE (Port E)
+Pin Numbers: 11 & 15
+
+5. What are the public attributes of the GPIO_InitTypeDef Struct?
+
+The attributes are listed in the form [type] [name]:
+- uint32_t GPIO_Pin
+- GPIOMode_TypeDef GPIO_Mode
+- GPIOSpeed_TypeDef GPIO_Speed
+- GPIOOType_TypeDef GPIO_OType
+- GPIOPuPd_TypeDef GPIO_PuPd
+
+6. Were there any difficulties? If not, what did you learn?
+
+- I didn't have too much difficulty with this lab to be honest. I learned how to construct a sequence pattern for the LED lights that was reactive to the button pressings. My first algorithm to solve this sequence looped around an int i that equals 0 to start.
+
+- From there, I was treating i = 8 (a special case where the f3d_led_all_on and f3d_led_all_off need to be ran) as a special case where it would execute the led all on functions and run the delay function. This ended up working as far as creating the appearance that the LEDs were lighting up in a sequence. However, the fatal flaw was that holding down the user button resulted in no affect at pausing the sequence, since the all led on was handled as a special case and is executed inside an if statement, unlike the rest of the sequence where it can only be executed if the button isn't being pressed.
+
+- My algorithm that i currently use is the result of this trial and error.

@@ -1,0 +1,14 @@
+# Lab 08
+
+#### B 481
+#### 2 MArch 2018
+#### Name: Matthew Lonis
+#### Username: mrlonis
+
+## Notes
+
+In this lab we added three buttons to our OpenGL view in order to select which type of spline we would like to use when drawing our splines. This is a good starting point for Assignment 2.
+
+### Important
+
+In order to draw splines, you will want to pass that dummy array I made at the top of y swift file into the vertex shader, along with the four control points. I'll need to make new variables in the vertex shader and also a new function to draw the splines. Map a mde variable to the vertex shader to know which spline we are drawing.

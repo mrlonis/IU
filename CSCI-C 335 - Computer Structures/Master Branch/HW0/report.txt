@@ -1,0 +1,33 @@
+Expected Output from tests:
+
+1 2 f      			// 2 -> 1 ->
+c
+11 22 f    			// 22 -> 11 ->
+c
+1 2 + f    			// 3 ->
+c
++ - * / f  			// error messages that star is empty (5 messages)
+1e2 f      			// 2 -> 1 ->
+c
+1e2 + f    			// 3 ->
+c
+11e22 + f  			// 33 ->
+c
++ 3 4 5 6 p f + f - f / f q	// empty stack message
+				// 6
+				// 6 -> 5 -> 4 -> 3 ->
+				// 11 -> 4 -> 3 ->
+				// -7 -> 3 ->
+				// 0 ->
+
+Instead of using scanf, I found it easier to simply use getchar() to process input. I still store information in an array, for future access and as a way to provide the program with a 'memory', but it allowed me to easily implement features that I wanted such as ignoring characters in between numbers (allowing 1e2 +) to return 3. I like this approach because I've always enjoyed making my C programs able to handle any kind of input without crashing or causing users any grief. My reasoning behind adding this feature was because it fit into my algorithm design easily and required minimal code changes.
+
+My number processing function is used in conjunction with the main function. This function processes the chars in the input char array between the integers start and end. Start, end, and input are all static variables, allowing the numberIdentifier() function to be quickly kicked off without passing parameters. This approach allowed me to fine tune how my algorithm worked. I stepped through my program multiple times to ensure no matter what, whenever numberIdentifier() is kicked off, it will run with no errors. The function knows how what to expect. The function properly converts chars to ints using a power method.
+
+It does this by determining the range of the number under consideration by doing end - start. From here, it allowed me to multiply each converted digit by a power of 10 add add it to a variable initially set to 0.
+
+If the function process '21' for example, it starts by converting '2' to 2. Then since the range is 2, it multiplies 2 by 10 and adds it to a variable set to 0. At this point that variable is 20. Each new iteration subtracts 1 from the range so when we process '1' and turn it into 1, it isn't multiplied by a power of 10 and is instead added to the variable. The variable at this point is now equal to 21, the number we wanted.
+
+I never used the isDigit or atoi functions. I never used the isDigit function because I wanted to get hands on and figure out for myself how to check if a char is a digit by using the ASCII table. I also didn't use the atoi function because atoi is considered depreciated by many and does ZERO error checking, a key problem in implementing the ignoring of characters.
+
+I also didn't know what error to put in the push function so I made up something about memory not being able to be allocated since the only outside function called in push() is malloc().

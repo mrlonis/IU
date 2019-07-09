@@ -1,0 +1,13 @@
+
+abs.o:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <abs>:
+   0:	b4f0      	push	{r4, r5, r6, r7}
+   2:	17c3      	asrs	r3, r0, #31
+   4:	18c0      	adds	r0, r0, r3
+   6:	4058      	eors	r0, r3
+   8:	bcf0      	pop	{r4, r5, r6, r7}
+   a:	4770      	bx	lr

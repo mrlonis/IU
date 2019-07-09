@@ -1,0 +1,26 @@
+Name: Matthew Lonis
+Username: mrlonis
+
+Results: 
+
+I accomplished a successful setup of GitHub. I was aided by
+ my experience in CSCI-C 291 and found this to be very easy for me. I
+ also successfully built a 'Hello world!' program as well as an
+ Icebreaker Hello World program that includes some "crazy" code. I
+ simply just added math calculations because I didn't really have any
+ ideas at the time and nor did my partner.
+
+Difficulties: 
+
+I had some difficulty compiling my icebreaker.c code
+ because I had imported the math.h header in my file. However, I kept 
+receiving errors from gcc when I ran gcc -o icebreaker icebreaker.c.
+ I was told I have undefined references, despite importing the math.h 
+header. Turns out I needed to add a -lm to the end of my gcc statement 
+in order to link the math library.
+
+What I've learned: 
+
+I learned today who my lab instructors are. I also 
+learned to add a -lm to the end of any gcc statement in which the code 
+that needs to be compiled references functions in the math.h header.

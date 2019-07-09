@@ -1,0 +1,18 @@
+/*
+What is the output of this program and why?
+public class Four {
+    public static void main(String[] args) {
+      boolean p = false, q = false;
+      System.out.println( ! p && q );
+    }
+}
+Would anything change if the program printed ! (p && q) instead?
+Why or why not?
+*/
+
+public class Four {
+    public static void main(String[] args) {
+      boolean p = false, q = false;
+      System.out.println( ! p && q );
+    }
+}

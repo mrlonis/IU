@@ -1,0 +1,173 @@
+﻿B481 / Spring 2018
+
+Homework 1
+
+Name: Matthew Lonis
+
+Username: mrlonis
+
+
+
+!ENABLE WORDWRAP!
+
+
+
+/***********/
+IG Chapter 1
+
+
+/***********/
+
+1.1 - The pipeline approach to image generation is nonphysical. What are the main advantages and disadvantages of such a nonphysical approach?
+
+
+	
+Answer:
+
+	- Advantages: The pipeline approach lets each object can be processed independently of other objects which leads to faster performance and reduced memory consumption because not  all objects are kept available. 
+
+	
+
+	- Disadvantages: The nonphysical pipeline approach cannot handle most global effects such as shadows, reflections, and blending in a physically correct manner and must instead be approximated.
+
+
+
+1.2 - In computer graphics, objects such as spheres are usually approximated by simpler objects constructed from flat polygons (polyhedra). Using lines of longitude and latitude, define a set of simple polygons that approximate a sphere centered at the origin. Can you use only quadrilaterals or only triangles?
+
+
+
+	Answer:	
+	
+	- Starting at Latitude 1 and Longitude 1 going up to Latitude N and longitude M, we will fill each square in-between Latitude and Longitude lines with triangles. The squares formed by the flattened out latitude and logitude map, as shown in class, can each be filled with a minimum of two triangles. Therefore, yes we can approximate a sphere using only triangles (much like at Disney's Epcot park). Archimedean solids are great to study because it is the geometric soldis that approximate spheres by using polygons.
+
+
+
+1.8 - The memory in a frame buffer must be fast enough to allow the display to be refreshed at a rate sufficiently high to avoid flicker. A typical workstation display can have a resolution of 1280 × 1024 pixels. If it is refreshed 72 times per second, how fast must the memory be? That is, how much time can we take to read one pixel from memory? What is this number for a 480 × 640 display that operates at 60 Hz but is interlaced?
+
+
+
+	Answer: 
+
+	- If our display is 1280 x 1024 pixels, we have 1,310,720 total pixels. Since the refresh is 72 times per second, we need to refresh 94,371,840 Pixels pr second.
+
+	
+
+	- If the display is 480 x 640, we have 307,200 total pixels in the display. With a refresh of 60hz, we need to process 18,432,000 per second to refresh. HOWEVER, since the display is interlaced, we divide this by 2 to get 9,216,000 pixels per second.
+
+
+
+Additionally, also calculate the same information (i.e. the maximum allowed time to read one pixel from memory) for the native resolution provided by a mobile device you own, e.g. a smartphone or a tablet computer. You'll need to find the technical specifications for your device's screen resolution and refresh rate. Then use its native resolution, at the highest available refresh rate for that resolution, to compute the answer.
+
+
+
+	Answer: 
+	
+	- I own an iPhone X who's max resolution is 2436 x 1125 pixel resolution at 458 ppi and a max refresh rate of 60hz. So we have a total of 2,740,500 pixels. Since the refresh is 60hz, we need to refresh 164,430,000 pixels per second.
+
+
+
+1.10 - Consider the design of a two-dimensional graphical API for a specific application, such as for VLSI design. List all the primitives and attributes that you would include in your system.
+
+
+
+	Answer:
+
+	- Primitives: Points, Line Segments, Polygons, text, image drawing, and curves/spheres (through the use of polygon approximation).
+
+       
+	- Attributes: Position, orientation, focal length (zooming), line style, fill style, transformations, compositing, foreground/background colors, fonts, and clipping regions.
+
+
+
+1.13 - An interesting exercise that should help you understand how rapidly graphics performance has improved is to go to the Web sites of some of the GPU manufacturers, such as NVIDIA, ATI, and Intel, and look at the specifications for their products. Often the specs for older cards and GPUs are still there. How rapidly has geometric performance improved? What about pixel processing? How has the cost per rendered triangle decreased?
+
+
+
+	Answer:
+
+	- As I mentioned in class, it is extremely difficult to find the required stats on any AMD, NVIDIA, or Intel card and can't answer this question. Most of the older GPUs don't even tell you what TFLOPS they perform at. Thje only thing consistently given out is clock speed and memory speed.	
+
+	- Old Card Stats
+		
+		- Name: NVIDIA GTX 780
+		
+		- Source: https://www.geforce.com/hardware/desktop-gpus/geforce-gtx-780/specifications
+		
+		- Base Clock (MHz): 863
+		
+		- Memory Speed 6.0 Gbps
+
+	
+	
+	- New Card Stats
+		
+		- Name: NVIDIA GTX 1080
+		
+		- Source: https://www.nvidia.com/en-us/geforce/products/10series/geforce-gtx-1080/
+		
+		- Base Clock (MHz): 1607
+		
+		- Memory Speed: 10 Gbps
+
+	
+
+	- Conclusion: NVIDIA Desktop GTX cards have seen an increase of 86.2% in base clock rate and an increase of 66.66% to memory speed. In other words, an increase of 66.66% in pixel processing/triangle processing and an increase of 86.2% in geometric processing/triangle processing.
+
+
+
+
+/***********/
+IG Chapter 2
+
+
+/***********/
+
+2.18 - A certain graphics system with a CRT display is advertised to display any four out of 64 colors. What does this statement tell you about the frame buffer and about the quality of the monitor?
+
+
+	
+Answer:
+
+	- This tells me that colors are only represented with 6 bits resulting in 2 bits per channel, resulting in only 64 colors being able to be displayed (since (2^2)^3 is 64). This means the frame buffer is only using 6 bits for each color (not even an entire byte) and thus is much smaller than the standard 24 bits (3 bytes) per color. This tells me the monitor is not of high quality since 24-bits is basically standard at this point. Its also safe to assume the refresh rate is no higher than 60Hz if even that (since if a manufacturer is okay with 6-bit color they certainly will be okay with a bad refresh rate).
+
+
+
+/*************************/
+
+OpenGL Chapter 1 Questions
+/*************************/
+
+
+
+
+a. - What is the stage that precedes Primitive Assembly, and what do you think the purpose of that stage is?
+
+
+	
+Answer:
+
+	- The stage before Primitive Assembly is called Vertex Shader. Vertex shaders can be used for transforming by a matrix, computing lighting to generate a per-vertex color, and generating or transforming texture coordinates. Vertex shaders can be used to perform custom math, specified by the application, that enables new transformations, lighting effects, or vertex-based effects not allowed in more traditional fixed-function pipelines.
+
+
+
+b. - What is the the stage that follows Primitive Assembly, and what do you think the purpose of that stage is?
+
+
+	
+Answer:
+
+	- Rasterization follows primitive assembly and this stage is used to process primitives into a set of 2D fragments which are passed along to the fragment shader.
+
+
+
+c. - What are the primitives that get assembled in this stage? Provide the names of at least two such primitives.
+
+
+
+	Answer:
+	
+	- Some primitives that get assembled in the rasterization stage are point sprites, lines, and triangles.
+
+
+
+/* end of hw01mrlonis.txt */

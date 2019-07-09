@@ -1,0 +1,33 @@
+
+max_array.o:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <max_array>:
+   0:	b4f0      	push	{r4, r5, r6, r7}
+   2:	2900      	cmp	r1, #0
+   4:	dd10      	ble.n	28 <.EARLYEND>
+   6:	0089      	lsls	r1, r1, #2
+   8:	0003      	movs	r3, r0
+   a:	1841      	adds	r1, r0, r1
+   c:	2400      	movs	r4, #0
+   e:	681a      	ldr	r2, [r3, #0]
+  10:	0020      	movs	r0, r4
+  12:	4282      	cmp	r2, r0
+  14:	d900      	bls.n	18 <max_array+0x18>
+  16:	0014      	movs	r4, r2
+  18:	4282      	cmp	r2, r0
+  1a:	d900      	bls.n	1e <max_array+0x1e>
+  1c:	0010      	movs	r0, r2
+  1e:	3304      	adds	r3, #4
+  20:	428b      	cmp	r3, r1
+  22:	d1f4      	bne.n	e <max_array+0xe>
+
+00000024 <.END>:
+  24:	bcf0      	pop	{r4, r5, r6, r7}
+  26:	4770      	bx	lr
+
+00000028 <.EARLYEND>:
+  28:	2000      	movs	r0, #0
+  2a:	e7fb      	b.n	24 <.END>

@@ -1,0 +1,14 @@
+Report_1.txt
+
+Created By: Matthew Lonis
+Created On: 15 January 2018
+Last Modified By: Matthew Lonis
+Last Modified On: 15 January 2018
+
+Question 1 - What is Orphan and Zombie processes?
+
+While the entire nomenclature is quite gruesome, I think I've come to understand both of these processes. A zombie process is a process that hasn't been reclaimed. Whenever a child exits, it's parent must wait for it to get its exit code. Until then, the exit code is stored in the processing table. Zombies only exist in the processing table however, they can prevent other programs from executing if they are not reaped. An orphan process is a child that continued executing after a parent program was terminated. Orphan processes are reclaimed by init. The difference between an orphan and a zombie is that a zombie's parent process is either still around and hasn't reaped its children, or the code was poorly written and the parent forgot to reclaim its children after they finished exiting. In other words, an orphan is made when a parent process exits before the child process does. A zombie is a child that has exited and is waiting to be reclaimed from the processing table.
+
+Question 2 - What are the changes that occur when the child process calls the exec system call to execute a new program?
+
+The exec call is a way to star a new process that essentially replaces the current process (or child). It does this by loading the program you want to execute into the current processing space and running the program from the entry point. Basically when you use exec within a child process, that process sort of "transforms" into the process you are trying to execute.

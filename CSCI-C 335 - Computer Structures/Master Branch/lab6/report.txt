@@ -1,0 +1,50 @@
+/**
+ * report.txt
+ *
+ * Created By: Matthew Lonis
+ * Created On: 5 October 2017
+ * Last Modified By: Matthew Lonis
+ * Last Modified On: 12 October 2017
+ */
+
+1. Discuss the advantages and disadvantages of printf debugging? Note: there is no right answer to this, we are just looking for your thoughts on the issue
+
+- Pros:
+    - Easy to implement
+    - Good for making sure calculations and receiving data is working
+
+- Cons:
+    - Requires an operating system or newlibs_stubs
+    - Doesn't debug hardware (can't see hardware)
+    - Can't display hardware signals
+
+- In short, I think printf debugging is useful for easy and quick debugging where a developer may want to make sure the variable that stores information is initialized or properly changing. However, printf debugging falls short when working on boards like the stm32 because there is no operating system and can't help debug hardware on the boards.
+
+2. Explain why the spiReadWrite function is called inside a higher level peripheral function (the lcdWrite function).
+
+- The higher level functions require the lower level functions in order to access the hardware bits and memory.
+
+3. Why does LCD_CS_DEASSERT() do? Why is it important?
+
+- The LCD_CS_DEASSERT() deasserts the chip select pin of the SPI. This macro is mapped to GPIO_SetBits(GPIOB, GPIO_Pin_12). Essentially LCD_CS_DEASSERT() is setting the bits for GPIOB PB12 to signal the end of a communication.
+
+4. Explain how the character data from the ASCII array in glcdfont.c gets converted to pixels.
+
+- The character data appears to represent a some sort of color representation for a certain row of pixels. I'm not sure however. This wasn't discussed in lab.
+
+5. Give the exact timing difference between the two versions of f3d_lcd_fillScreen, from the Salae analyzer, and explain why the new function is faster.
+
+- The new function is faster because it is taking advantage of the pushColor function's ability to push colors to more than 1 pixel at once. This saves time by not having to loop through every single pixel, but instead pushing an array equal to the width of the screen at once and writing all the colors at once, and doing that for every y value until we reach the height of the screen.
+
+- This makes the function only looping ST7735_height times instead of ST7735_width x ST7735_height times.
+
+- It appears to be .12 seconds faster
+
+6. Include a logic analyzer screen shot of drawing to the LCD [5]:
+
+- See lab6 Directory
+
+7. Difficulties [5]:
+
+- Making a graph to represent the gyro data
+- Making the rectangles redraw in such a way as to make it look smooth and seamless on the display.

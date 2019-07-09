@@ -1,0 +1,35 @@
+Q1.) What are we doing here and how does it relate to what we know about SPI?
+
+What we are doing here is setting high and low macros to signal the start and end of communication with the SPI bus. The SD card relates to SPI in the same interface, the only thing being is that it exists as an external component.
+
+Q2.) Explain how you might use the *f3d_delay_uS()* function within the *delay()* function to replace the delay loop below. What would you expect to be the advantage of using a timer over a delay loop?
+
+I would change my delay function as follows:
+
+void delay(int count) {
+  while (count-- > 0) {
+    f3d_delay_uS(count);
+  }
+}
+
+The advantage of using a timer over a delay loop is that a timer will reflect a real sense of time whereas a delay loop is in a way dependent on how fast the CPU can get through the loop. Therefore, by using a real timer instead of a delay loop, the CPU is not as taxed during it's waiting process and merely has to check a flag on the timer before proceeding.
+
+Q3.) Read chapter 12 in the lab manual which covers DMA (direct memory access). Why might DMA be important in improving the performance of your image display application?
+
+DMA will be important in imporivng the performance of our image display application because it wont tie up the CPU trying to transfer the data between memory and peripherals. DMA will also dramatically improve speeds since the SPI peak transfer rate on our boards is 750,000 transfers/second whereas the memory bus of the STM32 Value line device can support 24,000,000/5 RAM transfers/second.
+
+Q4.) Research the FAT file system and describe the function of the file allocation table. Explain how the corruption of an entry in the table can cause part of a file to be lost.
+
+The file allocation table acts as a hashtable or similar other indexing data structure like an array that uses indexes to store the bits of a file. These index are grouped into clusters. The size of the cluster is determined byt he FAT integer proceeding the FAT characters, For example, FAT32 uses 32 bits for each cluster (or index) in the file allocation table. Each cluster designates either:
+
+	1. The number of the next cluster in the file
+	2. A marker indicating:
+		1. End of file
+		2. Unused disk space
+		3. Special reserved areas of the disk
+
+A corruption in an entry of the table can cause part of a file to be lost. This is because most files take up more than the bits for a cluster meaning a file takes up multiple clusters more often than not. Due to this, even if only one cluster is affected, part of the file is irreversibly damaged and lost.
+
+Q5.) What is the difference between FAT16 and FAT32?
+
+The difference between FAT16 and FAT32 is that FAT16 uses 16 bits to identify each cluster within the file allocation table whereas FAT32 uses 32 bits.

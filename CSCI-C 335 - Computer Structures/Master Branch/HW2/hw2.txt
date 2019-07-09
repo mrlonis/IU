@@ -1,0 +1,61 @@
+/*
+ * hw2.txt
+ *
+ * Created By: Matthew Lonis
+ * Created On: 1 October 2017
+ * Last Modified By: Matthew Lonis
+ * Last Modified On: 1 October 2017
+ *
+ * Part Of: HW2
+ *
+ * Description:
+ *
+ */ 
+
+Submit your homework through github.
+
+Do the following exercises from the book:
+
+1. 4.1 Largest radix-r number
+
+2. 4.2 Carry bits
+
+3. 4.3 Complement number range
+
+4. 4.4 2's complement operation
+
+5. 4.5 Sign extension
+
+Using techniques from the book, do the following:
+
+6. Using the technique presented in section 4.1, convert the following decimal numbers to binary (show your work):
+
+	a. 121
+
+	b. 1537
+
+	c. 31333
+
+	d. 97
+
+7. Perform the following subtraction operations using complements as described in section 4.2 (show your work):
+
+	a. 121 - 41
+
+	b. 1022 - 35
+
+	c. 151 - 90
+
+	d. 2120 - 101
+
+8. Convert the following decimal numbers to 8-bit two's complement (show your work):
+
+	a. -121
+
+	b. -51
+
+	c. -104
+
+	d. 115
+
+	e. 127

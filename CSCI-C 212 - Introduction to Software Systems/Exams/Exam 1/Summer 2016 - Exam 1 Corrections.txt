@@ -1,0 +1,321 @@
+Matthew Lonis
+CSCI-C 212 - Exam 1 Corrections
+
+Total: 28/41
+
+Problem # - Correct/Incorrect - Points Earned
+
+1 - Incorrect - 0
+
+	I didn't even try to use BigDecimal. Instead, i just wrote the answer of the basic arithmatic because i didn't know or study what BigDecimal is. The code below showcases how i would write and calculate problem 1 using BigDecimal:
+
+/*Begin Java Example for Exam Corrections*/
+
+import java.math.*;
+
+class BigDecimalExample {
+  public static void main(String[] args) {
+    BigDecimal a = new BigDecimal("1");
+    BigDecimal b = new BigDecimal("2");
+
+    System.out.println( a.add(b) ); 
+  }
+}
+
+/*End Java Code*/
+
+	I won't make this mistake again because i now know how to use BigDecimal. I deserve zero points for this problem.
+
+2 - Incorrect - 0
+
+	I didn't even try to use BigDecimal. Instead, i just wrote the answer of the basic arithmatic because i didn't know or study what BigDecimal is. The code below showcases how i would write and calculate problem 2 using BigDecimal:
+
+/*Begin Java Example for Exam Corrections*/
+
+import java.math.*;
+
+class BigDecimalExample {
+  public static void main(String[] args) {
+    BigDecimal a = new BigDecimal("2");
+    BigDecimal b = new BigDecimal("3");
+
+    System.out.println( a.multiply(b) ); 
+  }
+}
+
+/*End Java Code*/
+
+	I won't make this mistake again because i now know how to use BigDecimal. I deserve zero points for this problem.
+
+3 - Incorrect - 0
+
+	I didn't even try to use BigDecimal. Instead, i just wrote the answer of the basic arithmatic because i didn't know or study what BigDecimal is. The code below showcases how i would write and calculate problem 3 using BigDecimal:
+
+/*Begin Java Example for Exam Corrections*/
+
+import java.math.*;
+
+class BigDecimalExample {
+  public static void main(String[] args) {
+    BigDecimal a = new BigDecimal("1");
+    BigDecimal b = new BigDecimal("2");
+    BigDecimal c = new BigDecimal("3");
+    BigDecimal d = new BigDecimal("4");
+
+    System.out.println( a.subtract(b.subtract(c.subtract(d))) ); 
+  }
+}
+
+/*End Java Code*/
+
+	I won't make this mistake again because i now know how to use BigDecimal. I deserve zero points for this problem.
+
+4 - Incorrect - 0
+
+	I didn't even try to use BigDecimal. Instead, i just wrote the answer of the basic arithmatic because i didn't know or study what BigDecimal is. The code below showcases how i would write and calculate problem 4 using BigDecimal:
+
+/*Begin Java Example for Exam Corrections*/
+
+import java.math.*;
+
+class BigDecimalExample {
+  public static void main(String[] args) {
+    BigDecimal a = new BigDecimal("1");
+    BigDecimal b = new BigDecimal("2");
+    BigDecimal c = new BigDecimal("3");
+    BigDecimal d = new BigDecimal("4");
+    
+    System.out.println( ((a.subtract(b)).subtract(c)).subtract(d));
+  }
+}
+
+/*End Java Code*/
+
+	I won't make this mistake again because i now know how to use BigDecimal. I deserve zero points for this problem.
+
+5 - Incorrect - 0
+
+	I didn't even try to use BigDecimal. Instead, i just wrote the answer of the basic arithmatic because i didn't know or study what BigDecimal is. The code below showcases how i would write and calculate problem 4 using BigDecimal:
+
+/*Begin Java Example for Exam Corrections*/
+
+import java.math.*;
+
+class BigDecimalExample {
+  public static void main(String[] args) {
+    BigDecimal a = new BigDecimal("2");
+    BigDecimal b = new BigDecimal("3");
+    BigDecimal c = new BigDecimal("4");
+    BigDecimal d = new BigDecimal("5");
+    
+    System.out.println( (a.multiply(b)).add(c.multiply(d)) );
+  }
+}
+
+/*End Java Code*/
+
+	I won't make this mistake again because i now know how to use BigDecimal. I deserve zero points for this problem.
+
+6 - Incorrect - 0
+
+	I put down seven as my answer. I did this because i thought each '\' 'n' '\' 't' character counted as one character. Im now realizing only '\n' '\t' are counted as 1. From there i also counted '\\' as one unit and then the single '\' as one because i remembered something about double slashes. I now know a double slash protects from a double quote. Since i got this totally wrong i deserve zero points.
+
+7 - Incorrect - 0
+
+	I put down 'a' as my answer because i thought it would subtract the distance in the alphabet the characters were and return 'a' nased on the ASCII conversion table. What i didn't take into account is that Java would return the number instead of the character. This makes sense because 'm' is 109 and 'n' is 110. 109-110 is -1. 
+
+
+
+8 - Correct - 1
+
+9 - Correct - 1
+
+10 - Incorrect - 0
+
+	I put down 7 as my answer. The correct answer is 5 because thats all 5 can give.
+
+11 - Correct - 1
+
+12 - Correct - 1
+
+13 - Correct - 1
+
+14 - Correct - 1
+
+15 - Correct - 1
+
+16 - Correct - 1
+
+17 - Correct - 1
+
+18 - Correct - 1
+
+
+
+19 - Partially Correct - 0.5
+
+	I put !b=(n==0) which to me made sense but when i ran it in the java interactions i got a bad left expression error. I instead should've wrote b != (n == 0).
+
+20 - Correct - 1
+
+21 - Partially Correct - 0.5
+
+	I put !b=(n==0) which to me made sense but when i ran it in the java interactions i got a bad left expression error. I instead should've wrote b != (n == 0).
+
+22 - Correct - 1
+
+23 - Correct - 1
+
+24 - Correct - 1
+
+25 - Partially Correct - 0.5
+
+	The reason I'm putting partially correct is because i understand the problem but i don't know if my blunt answer 'false' is in the correct format. I put this answer down because in any circumstance, this set of comparisions will always return false. A number cannot be both less than three and greater than 5
+
+26 - Correct - 1
+
+27 - Correct - 1
+
+28 - Correct - 1
+
+29 - Incorrect - 0
+
+	I put down y = 1. When i put this into a Java program and ran it, my result was y = 10.
+
+30 - Correct - 1
+
+31 - Correct - 1
+
+32 - Correct - 1
+
+33 - Correct - 1
+
+34 - Incorrect - 0.5
+
+	I was only 1 off. I think i understand why i got this wrog. I think i forgot to add 1 one last time.
+
+35 - Correct - 1
+
+36 - Correct - 1
+
+37 - Incorrect - 0
+
+	This is actually an infinite loop because by defining i as i = i++, with i++ i doesn't increment until the end of a code sequence. When i called = i++, i got the value that it was already at.
+
+38 - Correct - 1
+
+39 - Correct - 1
+
+40 - Correct - 1
+
+I think this is correct because i mimicked my code i replicated in lab 5
+
+/*Begin Lab 5 Code*/
+
+import java.util.Scanner;
+
+public class Circle {
+  static double distance;
+  
+  static void overlaps(double X1, double Y1, double X2, double Y2) {
+    double distance = Math.pow((X1 - X2) * (X1 - X2) + (Y1 - Y2) * (Y1 - Y2), 0.5);
+  }
+  
+  public static void main(String[] args){
+    Scanner input = new Scanner(System.in);
+    
+    System.out.print("Enter Circle 1 x-coordinate: ");
+    double X1 = input.nextDouble();
+    System.out.print("Enter Circle 1 y-coordinate: ");
+    double Y1 = input.nextDouble();
+    System.out.print("Enter Circle 1 radius: ");
+    double radius1 = input.nextDouble();
+    
+    System.out.print("Enter Circle 2 x-coordinate: ");
+    double X2 = input.nextDouble();
+    System.out.print("Enter Circle 2 y-coordinate: ");
+    double Y2 = input.nextDouble();
+    System.out.print("Enter Circle 2 radius: ");
+    double radius2 = input.nextDouble(); 
+    
+    overlaps (X1, Y1, X2, Y2);
+    
+    if (radius2 >= radius1 && distance <= (radius2 - radius1)){
+      System.out.println("Circle 1 is inside Circle 2.");
+    }
+    else if (radius1 >= radius2 && distance <= (radius1 - radius2) ) {
+      System.out.println("Circle 2 is inside Circle 1.");
+    }
+    else if (distance > (radius1 + radius2)){
+      System.out.println("Circle 2 does not overlap Circle 1.");
+    }
+    else {
+      System.out.println("Circle 2 overlaps Circle 1.");
+    }
+    
+    input.close();
+  }
+}
+
+/*End Code*/
+
+41 - Correct - 1
+
+Same as above but for rectangles
+
+/*Begin Rectangle.java*/
+
+import java.util.Scanner;
+
+public class Rectangle {
+  static double distance;
+  
+  static void overlaps(double X1, double Y1, double X2, double Y2) {
+    double distance = Math.pow((X1 - X2) * (X1 - X2) + (Y1 - Y2) * (Y1 - Y2), 0.5);
+  }
+  
+  public static void main(String[] args){
+    Scanner input = new Scanner(System.in);
+    
+    System.out.print("Enter Rectangle 1 x-coordinate: ");
+    double X1 = input.nextDouble();
+    System.out.print("Enter Rectangle 1 y-coordinate: ");
+    double Y1 = input.nextDouble();
+    System.out.print("Enter Rectangle 1 length: ");
+    double length1 = input.nextDouble();
+    length1 = length1/2;
+    System.out.print("Enter Rectangle 1 width: ");
+    double width1 = input.nextDouble();
+    width1 = width1/2;
+    
+    System.out.print("Enter Rectangle 2 x-coordinate: ");
+    double X2 = input.nextDouble();
+    System.out.print("Enter Rectangle 2 y-coordinate: ");
+    double Y2 = input.nextDouble();
+    System.out.print("Enter Rectangle 2 length: ");
+    double length2 = input.nextDouble();
+    length2 = length2/2;
+    System.out.print("Enter Rectangle 2 width: ");
+    double width2 = input.nextDouble(); 
+    width2 = width2/2;
+    
+    overlaps (X1, Y1, X2, Y2);
+    
+    if (length2 >= length1 && distance <= (length2 - length1)){
+      System.out.println("Rectangle 1 is inside Rectangle 2.");
+    }
+    else if (length1 >= length2 && distance <= (length1 - length2) ) {
+      System.out.println("Rectangle 2 is inside Rectangle 1.");
+    }
+    else if (distance > (length1 + length2)){
+      System.out.println("Rectangle 2 does not overlap Rectangle 1.");
+    }
+    else {
+      System.out.println("Rectangle 2 overlaps Rectangle 1.");
+    }
+    
+    input.close();
+  }
+}
+
+/*End Rectangle.java*/

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+fragment_csci_a290_c.xml
+
+Layout file for the CSCI-A 290 C & UNIX Basics Fragment Fragment
+
+Created by: Matthew Lonis
+Created on: 2/27/17
+Last Modified by: Matthew Lonis
+Last Modified on: 3/5/17
+Assignment/Project: A290 Final Project
+Part of: A290FinalProject, refers to csciA290CFragment.java
+-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scroll_view_c"
+    tools:context="edu.indiana.mrlonis.a290finalproject.csciA290CFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/csciA290CCourseInfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/course_info"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:textSize="14pt" />
+
+        <TextView
+            android:id="@+id/csciA290CCourseDescription"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/csci_a290_c_course"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/csciA290CProject1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/project_1"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:textSize="14pt" />
+
+        <TextView
+            android:id="@+id/csciA290CProject1Name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:text="@string/csci_a290_c_project1_name"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/csciA290CProject1Description"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/csci_a290_c_project1_description"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/csciA290CProject1File"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/csci_a290_c_project1_file"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+</ScrollView>

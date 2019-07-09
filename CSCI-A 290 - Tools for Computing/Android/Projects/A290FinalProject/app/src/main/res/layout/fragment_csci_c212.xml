@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+fragment_csci_c212.xml
+
+Layout file for the CSCI-C 212 Fragment
+
+Created by: Matthew Lonis
+Created on: 2/27/17
+Last Modified by: Matthew Lonis
+Last Modified on: 3/5/17
+Assignment/Project: A290 Final Project
+Part of: A290FinalProject, refers to csciC212Fragment.java
+-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scroll_view_c212"
+    tools:context="edu.indiana.mrlonis.a290finalproject.csciC212Fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/csciC212CourseInfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/course_info"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:textSize="14pt" />
+
+        <TextView
+            android:id="@+id/csciC212CourseDescription"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/csci_c212_course"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/csciC212Project1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/project_1"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:textSize="14pt" />
+
+        <TextView
+            android:id="@+id/csciC212Project1Name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:text="@string/csci_c212_project1_name"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/csciC212Project1Description"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/csci_c212_project1_description"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/csciC212Project1File"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/csci_c212_project1_file"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+</ScrollView>

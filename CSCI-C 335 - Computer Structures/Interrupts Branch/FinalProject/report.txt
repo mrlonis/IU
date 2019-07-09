@@ -1,0 +1,66 @@
+report.txt
+
+
+By Matthew Lonis
+
+
+Describe each of the tasks that you were responsible for performing and how each contributed to the overall project. [15]
+
+
+Both Alvaro and I worked entirely on everything together so there is no breakdown of tasks.
+
+1. Create main.c to swap between the gameMenu.c, credits.c, and newGame.c.
+
+This was our Skelton for the game and organized everything.
+
+2. Create gameMenu.c which allows the user to select either newGame.c or credits.c
+
+Once we got these files in mind, we were quickly able to work on different parts of the game.
+
+3. Create credits.c which plays a sound over and over again while also displaying details about who made the game and what the game is.
+
+Shows something about the creators of the game, plays audio AND uses the SD Card, and is shown when a game is over.
+
+4. Create newGame.c to control the game logic
+
+This housed everything to play a new game. This controlled switching between tower placement and tower selection modes when the game is paused to allow the user to place towers on the 8 x 8 board.
+
+This also controlled attacking and moving enemies (the core of the game) as well has round changes, setting up enemies and any other necessary variable changes in order to understand the state of the game at any given point in time. This also reacted to user input via the nunchuck.
+
+4a. Draw everything that needs to be drawn on the screen. This included figuring out all the correct coordinates and separating the game screen into a top, middle, and bottom section. Create functions that draw the initial layout of the screen as soon as a new game is started
+
+This was the hardest but allowed us to quickly implement game logic since we could draw anything we needed
+
+4b. The top section displays the round # and if the game is paused or not. Created functions to draw title.
+
+This was broken into its own function to make calling it easy
+
+4c. The middle section controls drawing enemies, towers, the path, and user movement during  tower placement. Created functions to quickly draw enemies, towers, the path, etc.
+
+This controlled drawing everything on the 8 x 8 board and is the bulk of the project
+
+4d. The bottom section controls the user tower selection before tower placement as well as is playing lives and money.
+
+The redraws bottom controls for money and life read-outs as well as tower selection
+
+5. Accelerometer functionality which essentially kills all enemies on the board and moves to the next round
+
+This was included to easily move between rounds if the enemies were not balanced correctly and utilizes the accelerometer
+
+6. Fine tune tower and enemy strengths to make the game more playable.
+
+This made the game more playable by having everything balanced in terms of enemy and tower design
+
+
+What technical challenges did you encounter in completing your tasks? [5]
+
+
+I experienced great difficulty trying to draw towers and enemies from BMP files. The resulting draw image was completely messed up every time so I ended up gutting it from the project in order to finish it in time.
+
+I also experienced HUGE difficulty finding a nunchuck that worked properly. This was my biggest challenge to overcome to be honest.
+
+
+What would you do differently if you could start the project over? [5]
+
+
+If I were to redo this project, I would spend far more time working on it than I did. I simply didn't have enough time to get it where I wanted it because all my other classes are really demanding.

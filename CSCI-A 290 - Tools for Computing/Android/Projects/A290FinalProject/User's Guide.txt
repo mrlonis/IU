@@ -1,0 +1,8 @@
+User’s Guide
+
+
+My application provides the user with a chance to get to now me, much like a resume. The app has a slide out navigation which is implemented by pressing the hamburger icon in the top left, and then selecting where they would like to go within my app. Each page is self explanatory and usually includes text to read. My resume page is a zoomable image. You may need to deploy this on a device, however I know with a Mac you can hold command and get a two finger slider pop up to achieve the zoom affect in the emulator.
+
+My course fragments, as seen with titles above them in the navigation drawer (to separate out the courses ad provide room to expand groups as I progress through school), all contain at least 1 project. By pressing on the button, which will usually have a file name or a Title, user’s will be taken to their web browser where they can view the project files in GitHub or view source code (depending on what project is selected). All the GitHub links are hosted on my public GitHub account outside of IU (through my mattlongis@gmail.com account rather than my IU email account). I did this because when loaded in my emulator, if I had the projects on the IU GitHub server it asked for a login even if the repository was private. I since moved my files to my public non-IU GitHub to ensure the files all display.
+
+Thanks for reading and I hope you enjoy my app!

@@ -1,0 +1,27 @@
+/*Write a rogram that demonstrates modeling
+
+Original:
+
+public class Line {
+  Point a, b;
+  Line (Point a, Point b) {
+    this.a = a;
+    this.b = b;
+  }
+  double length() {
+    this.a.distanceTo(this.b);
+  }
+}
+
+*/
+
+public class Line {
+  Point a, b;
+  Line (Point a, Point b) {
+    this.a = a;
+    this.b = b;
+  }
+  double length() {
+    this.a.distanceTo(this.b);
+  }
+}

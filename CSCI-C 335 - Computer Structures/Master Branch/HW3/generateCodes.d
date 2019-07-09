@@ -1,0 +1,1 @@
+generateCodes.o: generateCodes.c

@@ -1,0 +1,10 @@
+import javax.swing.Timer; 
+
+public class BigBang {
+  Timer t; 
+  public BigBang(Tetris world) {
+    this.t = new Timer(1000, world); 
+    
+    t.start(); 
+  }
+}

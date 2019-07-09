@@ -1,0 +1,53 @@
+Enable WordWrap please
+
+Below is a User's Guide for each individual form in my application:
+
+/* Main Page */
+
+The main page contains a picture box with my high school senior picture. Next to it, on the right, are 8 buttons, each corresponding to a different tasks. The task names are included in the button for very intuitive navigation.
+
+The first button is a button with text reading "Exit". This very obviously exits the application. The next button has the text "A290 Buffet" and opens up a program we made in class called A290 Buffet. The next button has the text "Calculator" and opens up my calculator form. The next button has the text "Fuel Mileage Calculator" which opens up my fuel mileage calculator form. The next button has the text "Tire Size Calculator" and opens up my tire size calculator form. The next button has the text "Unit Conveter" which opens up the unit converter form. The next button has the text "Options" and opens up my options form. Finaly, my last button has the text "Information" and opens up the ifnormation form. Descriptions of each of these forms can be found below and will further explain their use.
+
+/* A290Buffet */
+
+The A290 Buffet form, once opened, will display a blank page with 5 buttons: select picture, close, draw border, enlarge, and shrink. The select picture button will open up an open file dialog and allow you to select a picture which will be displayed in a picture box to the left of the button. The Close button will close the form. The draw border box will draw a border around the picture box, even when there is no picture, in order to accentuate the edge of the picture. The enlarge and shirnk buttons will grow or shrink the entire form (as well as its contents). If you have a border drawn, the border wil remain visible even after altering the size of the form.
+
+When your mouse is over the picture box, two labels will appear showing you the x and y coordinates of the mouse over the picture box.
+
+/* Calculator */
+
+The calculator opens and displays three text boxes, with associated labels for their use, 8 mathematical operators, and three other buttons. The text boxes have a label to the left of them giving the user an idea of thier purpose. "First Number" and "Second number" are for user input and will be the numbers used in the calculations. These text boxes will only accept numbers and will display a message box warning if you give it something other than a number. Doubles are accepted here so you are not limited to whole numbers.
+
+The mathematical operators are all fairly self explanatory, however, if one clicks on the heklp button, the help form will appear and provide an explanation of eqach button and what they do. Once a user clicks on a mathematical operator button, the result of the calculation will appear in the text box that is by the label that reads "answer". The clear button will reset everything back to the initial state it was in when the user opened the form. Close button will close the form page.
+
+/* Calculator Help */
+
+As stated earlier, the form help page provides defenitions of each mathematical operator. If the user clicks any of these buttons and has numbers in the parent form's text boxes, the mathematical calculation will occur and display the result in the answer text box on the parent form. This way the user doesn't need to leave the form help in order to see the result of the calculation they wish to pursue.
+
+/* Fuel Mileage Calculator */
+
+Again like the calculator, there are text boxes with labels by them to describe their purpose. Since this is a fuel mileage calculator, no help form is necessary. The user must input a string for vehicle make and vehicle model, and an integer to represent the year of their vehicle (must be an integer and greater than 1885 but less than 2020 for realism). The user will then input any non zero, non negative number in the fuel ammount and in the distance travelled. Once all the text boxes are appropirately filled, once the user clicks the calculate button a message box will appear saying ""Your <vehicle year> <vehicle manufacturer> <vehicle model> is getting <MPG answer> miles per gallon" as well as display this result in the text box next to MPG label. Clear button resets the form to inital conditions and close button closes the form page
+
+/* Tire Size Calculator */
+
+The tire size calculator contains three text boxes to represent the three numbers in a metric tire. This doesn't need much explaining because if a user wishes to perform this calculation they need some idea of what a tire size number looks like (for example "225/75R17"). These text boxes wont take anything less than zero nor will they take anything other than an integer. A message box warning will display if the user tries to do this. Once all three numbers are entered the user simply presses the calculate button and the results will be displayed in the bottom text boxes. The clear button resets everything back to initial conditions and the close button closes the form. The tire comparison button opens up the tire comparison form.
+
+/* Tire Comparison */
+
+This is identical to the tire size calculator parent form but takes two tire sizes rather than one. Same rules as above apply to the tire size text boxes (i.e. integers only and not less than zero). Once the numbers are eneter, the user must click calculate and the results will appear in the text box table below. The clear button resets everything back to initial conditions and the close button closes the form.
+
+/* Unit Converter */
+
+The unit converter opens up with a big label titles "Length". Next to this label is a drop down combo box that allows the user to change what type of data they wish to convert. The options are length, mass, volume, and temperature dtata types. Depending on the selection, the items in the lower two combo boxes will change to reflect the change in data type. The big label at the top of the form will also change depending on what the user selects in the topmost combo box.
+
+The top most text box is where the user will input the number they wish to convert along with selecting the units for that number in the combo box to the right of that text box. The user then must select a data type to be converted to in the lowest combo box. It is important to note that whatever the user selects in the middle combo box, that item will disappear from the lowest combo box. So if the user inputs 1 mile, if they open up the lowest combo box, the options for mile will not be there. Clicking the convert button will display the result of the conversion in the second text box.
+
+Reset button resets everything to initial conditions, including combo boxes and the title label. The close button closes the form
+
+/* Options */
+
+The options form will display a group box with radio controls each representing a color and each changing the background color on all forms to that selected color. The options form has a check box that if checked, will cause the main form to display a confirmation dialog asking the user if they want to close the application rather than closing without a message box asking. The close button will close the form.
+
+/* Information */
+
+The information form describes some brief information about the overall program and provides myself a chance to personally speak to the user, especially since im making this program to be a program i show on a resume and to future employers. The close button closes this form. The text box with my message is an uneditable text box.
