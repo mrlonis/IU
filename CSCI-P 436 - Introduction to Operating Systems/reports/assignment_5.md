@@ -1,8 +1,8 @@
 # Assignment 5
 
-**Name**: Matthew Lonis
-**Username**: mrlonis
-**Date**: 4 April 2018
+**Name:** Matthew Lonis
+**Username:** mrlonis
+**Date:** 4 April 2018
 
 ## Testing
 
